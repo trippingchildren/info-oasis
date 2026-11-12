@@ -1,0 +1,17 @@
+{
+  "name": "Info Oasis",
+  "short_name": "Info Oasis",
+  "description": "Private research browsing: articles, studies, books, and museum collections in one place.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4fbfa",
+  "theme_color": "#0f766e",
+  "categories": ["education", "reference"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0f766e">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src https://*.wikipedia.org https://images-api.nasa.gov https://catalog.data.gov https://www.loc.gov https://wsearch.nlm.nih.gov https://eutils.ncbi.nlm.nih.gov https://api.openalex.org https://openlibrary.org https://gutendex.com https://api.artic.edu https://collectionapi.metmuseum.org; img-src 'self' https://*.wikimedia.org https://wikimedia.org https://*.nasa.gov https://tile.loc.gov https://www.loc.gov https://covers.openlibrary.org https://*.archive.org https://archive.org https://www.gutenberg.org https://www.artic.edu https://images.metmuseum.org data: blob:; media-src https://upload.wikimedia.org; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; manifest-src 'self'; worker-src 'self'">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='16'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url%28%23c%29'%3E%3Crect width='64' height='64' fill='%23c4ecf8'/%3E%3Ccircle cx='49' cy='16' r='7.5' fill='%23ffd45e'/%3E%3Ccircle cx='49' cy='16' r='7.5' fill='none' stroke='%23f5b73a' stroke-width='1.5'/%3E%3Cpath d='M0 44 Q8 39 16 44 T32 44 T48 44 T64 44 V64 H0Z' fill='%2335bdb8'/%3E%3Cpath d='M12 46 Q32 32 54 46 Q32 51 12 46Z' fill='%23f4d78f' stroke='%23c99a4a' stroke-width='1.2' stroke-linejoin='round'/%3E%3Cellipse cx='42' cy='45.5' rx='5.5' ry='1.8' fill='%236fd6ea'/%3E%3Cpath d='M0 54 Q8 50 16 54 T32 54 T48 54 T64 54 V64 H0Z' fill='%231d8f98'/%3E%3Cpath d='M30 43 Q33 33 29 23' stroke='%238a5a2b' stroke-width='3.4' fill='none' stroke-linecap='round'/%3E%3Cg fill='%2343b552' stroke='%232b8a3a' stroke-width='.8' stroke-linejoin='round'%3E%3Cpath d='M29 23 Q20 17 12 24 Q21 21 29 23Z'/%3E%3Cpath d='M29 23 Q26 12 18 10 Q25 15 29 23Z'/%3E%3Cpath d='M29 23 Q34 11 43 13 Q36 16 29 23Z'/%3E%3Cpath d='M29 23 Q38 20 46 28 Q37 25 29 23Z'/%3E%3Cpath d='M29 23 Q21 27 18 35 Q24 28 29 23Z'/%3E%3C/g%3E%3Ccircle cx='30.2' cy='24.2' r='2' fill='%237a4a1f'/%3E%3Ccircle cx='27.4' cy='25' r='1.7' fill='%238a5a2b'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://en.wikipedia.org" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<title>Info Oasis</title>
+<style>
+:root{color-scheme:light;--bg:#f4fbfa;--surface:#fff;--text:#1b2321;--muted:#5d6b67;--line:#dbe8e4;--accent:#0f766e;--accent-soft:#e0f3ef;--on-accent:#fff;--shadow:0 8px 28px rgba(15,50,45,.10);--fs:1.08rem;--mathf:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme]){--bg:#0f1514;--surface:#172120;--text:#e7eeec;--muted:#94a5a0;--line:#26332f;--accent:#5fd3c6;--accent-soft:#16302d;--on-accent:#0b1412;--shadow:0 8px 28px rgba(0,0,0,.45);--mathf:invert(1);color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0f1514;--surface:#172120;--text:#e7eeec;--muted:#94a5a0;--line:#26332f;--accent:#5fd3c6;--accent-soft:#16302d;--on-accent:#0b1412;--shadow:0 8px 28px rgba(0,0,0,.45);--mathf:invert(1);color-scheme:dark}
+:root[data-theme=sand]{--bg:#fbf6ea;--surface:#fffdf7;--text:#2b2519;--muted:#76694f;--line:#eadfc6;--accent:#a85a0c;--accent-soft:#fbead0;--on-accent:#fff;--shadow:0 8px 28px rgba(90,60,10,.10)}
+:root[data-theme=sky]{--bg:#eef7fd;--surface:#fff;--text:#14283a;--muted:#546a7c;--line:#d5e6f2;--accent:#0b65b8;--accent-soft:#def0fc;--on-accent:#fff;--shadow:0 8px 28px rgba(20,70,120,.10)}
+:root[data-theme=mint]{--bg:#eefaf3;--surface:#fff;--text:#14281e;--muted:#52695a;--line:#d3eadb;--accent:#12804a;--accent-soft:#dcf3e5;--on-accent:#fff;--shadow:0 8px 28px rgba(20,90,50,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button,input,select,textarea{font:inherit;color:var(--text)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Header */
+.bar{position:sticky;top:0;z-index:30;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1120px;margin:0 auto;padding:.65rem 1rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.brand{order:1;font:700 1.35rem Charter,"Iowan Old Style",Georgia,serif;color:var(--accent);text-decoration:none}
+.navr{order:2;margin-left:auto;display:flex;gap:.4rem;position:relative}
+.searchrow{order:3;flex:1 1 100%;display:flex;gap:.5rem}
+@media(min-width:820px){.searchrow{order:2;flex:1 1 auto;max-width:640px;margin-left:auto}.navr{order:3;margin-left:0}}
+.search{flex:1}
+.searchrow{position:relative}
+.search input,.searchrow select{padding:.55rem .9rem;background:var(--bg);border:1px solid var(--line);border-radius:999px}
+.search input{width:100%}
+.results{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;display:none}
+.results.open{display:block}
+.results>a{display:flex;gap:.7rem;align-items:center;padding:.7rem .8rem;text-decoration:none;color:var(--text)}
+.results>a:hover,.results>a:focus-visible{background:var(--accent-soft)}
+.thumb-empty{width:40px;height:40px;border-radius:6px;object-fit:cover;background:var(--line);flex:none}
+.results small{display:block;color:var(--muted);line-height:1.3}
+.iconbtn{background:none;border:1px solid var(--line);padding:.45rem .85rem;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block;font-size:.95rem}
+.iconbtn:hover{background:var(--accent-soft)}
+.btn{background:var(--accent);color:var(--on-accent);border:0;padding:.55rem 1.1rem;border-radius:999px;cursor:pointer;font-weight:600}
+.btn:hover{filter:brightness(1.08)}
+.pop{position:absolute;right:0;top:calc(100% + 8px);background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:.9rem;display:none;min-width:230px}
+.pop.open{display:block}
+.pop h3{font-size:.85rem;color:var(--muted);margin:.2rem 0 .4rem;font-weight:600}
+.pop .row{display:flex;gap:.4rem;margin-bottom:.7rem}
+.pop .row button{flex:1}
+.pop .on{background:var(--accent-soft);border-color:var(--accent)}
+
+.wrap{max-width:1120px;margin:0 auto;padding:1.5rem 1rem 3rem}
+.serif{font-family:Charter,"Iowan Old Style",Georgia,serif}
+
+/* Home */
+.hero{padding:2rem 0 1.25rem}
+.hero h1{font:700 clamp(2.1rem,6.5vw,3.4rem)/1.1 Charter,"Iowan Old Style",Georgia,serif}
+.hero p{color:var(--muted);margin-top:.6rem;max-width:54ch}
+.notice{background:var(--accent-soft);border-radius:10px;padding:.7rem 1rem;margin:.5rem 0}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:1rem}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.panel h2{font:600 1.15rem Charter,Georgia,serif;margin-bottom:.8rem}
+.feat img{width:100%;max-height:220px;object-fit:cover;border-radius:10px;margin-bottom:.8rem}
+.feat h3{font:700 1.4rem Charter,Georgia,serif}
+.feat p{color:var(--muted);margin:.4rem 0 .8rem}
+.list{list-style:none}
+.list li{padding:.55rem 0;border-top:1px solid var(--line)}
+.list li:first-child{border-top:0}
+.list .yr{font-weight:600;color:var(--accent);margin-right:.4rem}
+.list small{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips a{padding:.4rem .8rem;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);background:var(--surface)}
+.chips a:hover{background:var(--accent-soft)}
+
+/* Article */
+.layout{display:grid;gap:2rem;grid-template-columns:minmax(0,1fr)}
+@media(min-width:960px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+.toc{align-self:start}
+@media(min-width:960px){.toc{position:sticky;top:130px;max-height:calc(100vh - 150px);overflow:auto}.toc summary{pointer-events:none;list-style:none}.toc summary::-webkit-details-marker{display:none}}
+.toc summary{font-weight:600;cursor:pointer;padding:.4rem 0}
+.toc ol{list-style:none;font-size:.92rem}
+.toc a{display:block;padding:.25rem .6rem;border-left:2px solid var(--line);color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--accent);border-color:var(--accent)}
+.toc .sub a{padding-left:1.4rem}
+.article h1.title{font:700 clamp(1.9rem,5vw,2.8rem)/1.15 Charter,"Iowan Old Style",Georgia,serif;margin-bottom:.5rem}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:1.25rem;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+.body{font:400 var(--fs)/1.75 Charter,"Iowan Old Style",Georgia,serif;max-width:72ch}
+.body h2{font:700 1.5em/1.25 Charter,Georgia,serif;margin:2.2rem 0 .7rem;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
+.body h3{font:600 1.2em Charter,Georgia,serif;margin:1.6rem 0 .5rem}
+.body h4{margin:1.2rem 0 .4rem}
+.body p{margin:.8rem 0}
+.body ul,.body ol{margin:.8rem 0 .8rem 1.4rem}
+.body img{max-width:100%;height:auto}
+.body figure{margin:1.2rem 0}
+.body figcaption{font:400 .8em/1.5 system-ui,sans-serif;color:var(--muted);margin-top:.3rem}
+.body table{border-collapse:collapse;font:400 .82em/1.5 system-ui,sans-serif;display:block;overflow-x:auto;max-width:100%;margin:1rem 0}
+.body th,.body td{border:1px solid var(--line);padding:.4rem .6rem;vertical-align:top}
+.body th{background:var(--accent-soft)}
+.body table.infobox{float:right;width:300px;max-width:100%;margin:0 0 1rem 1.5rem;background:var(--surface);border-radius:10px}
+@media(max-width:700px){.body table.infobox{float:none;width:100%;margin:1rem 0}}
+.body .hatnote{font:italic .85em system-ui,sans-serif;color:var(--muted)}
+.body sup a{text-decoration:none;font:500 .7em system-ui,sans-serif}
+.body .references{font:400 .85em/1.55 system-ui,sans-serif}
+.body :target{background:var(--accent-soft)}
+.body a{overflow-wrap:anywhere}
+.attrib{margin-top:2.5rem;padding:1rem;border:1px solid var(--line);border-radius:12px;font-size:.88rem;color:var(--muted);max-width:72ch}
+.also{display:flex;flex-wrap:wrap;gap:.5rem 1rem;margin-top:.6rem}
+
+/* Info pages and library */
+.page{max-width:72ch}
+.page h1,.ptitle{font:700 clamp(1.9rem,5vw,2.6rem)/1.15 Charter,Georgia,serif;margin-bottom:.8rem}
+.page h2{font:700 1.3rem Charter,Georgia,serif;margin:1.8rem 0 .5rem}
+.page p,.page li{margin:.5rem 0}
+.page ul{margin-left:1.3rem}
+.lead{color:var(--muted);max-width:64ch;margin-bottom:1rem}
+.toolbar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 1.25rem;align-items:center}
+.toolbar input[type=text]{padding:.5rem .9rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);min-width:0;flex:1 1 180px}
+.fold{margin-bottom:1.1rem}
+.fold header{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.6rem}
+.fold h2{margin:0;overflow-wrap:anywhere}
+textarea{width:100%;padding:.6rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--bg);resize:vertical;min-height:70px}
+.items{list-style:none;margin-top:.8rem}
+.items li{padding:.7rem 0;border-top:1px solid var(--line)}
+.items .top{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-bottom:.4rem}
+.items .top a{font-weight:600;margin-right:auto;overflow-wrap:anywhere}
+.badge{font-size:.75rem;background:var(--accent-soft);padding:.1rem .5rem;border-radius:999px}
+.small{padding:.25rem .65rem;font-size:.85rem}
+.items select{padding:.25rem .5rem;border:1px solid var(--line);border-radius:999px;background:var(--bg);max-width:9rem}
+dialog{margin:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--text);padding:1.25rem;width:min(92vw,420px);box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+dialog h2{font:700 1.25rem Charter,Georgia,serif;margin-bottom:.8rem}
+dialog label{display:block;font-size:.85rem;color:var(--muted);margin:.7rem 0 .25rem}
+dialog select,dialog input{width:100%;padding:.55rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.dlgbtns{display:flex;gap:.5rem;justify-content:flex-end;margin-top:1rem}
+.state{padding:3rem 0;color:var(--muted);text-align:center}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padding:1.5rem 1rem;text-align:center}
+footer nav{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:.6rem}
+
+.brand{display:flex;align-items:center;gap:.5rem}
+.logo{width:38px;height:38px;flex:none;display:block}
+.pop{min-width:250px}
+.pop .row.wrap{flex-wrap:wrap}
+.pop .row.wrap button{flex:1 1 28%}
+.body figure img{background:#fff;border-radius:4px}
+.body .mwe-math-element img{filter:var(--mathf);background:none}
+img.broken{min-height:48px;background:var(--line);color:var(--muted);font:.8rem system-ui,sans-serif;padding:.5rem;border-radius:6px}
+.body>section:not(:first-child){content-visibility:auto;contain-intrinsic-size:auto 700px}
+.sk{display:grid;gap:.75rem;max-width:72ch;padding:1.5rem 0}
+.sk i{display:block;height:1rem;border-radius:6px;background:linear-gradient(90deg,var(--line),var(--accent-soft),var(--line));background-size:200% 100%;animation:sh 1.2s linear infinite}
+.sk i:first-child{height:2.2rem;width:60%}
+@keyframes sh{to{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.sk i{animation:none}}
+
+.chips button{padding:.4rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer}
+.chips button:hover{background:var(--accent-soft)}
+.chips .on{background:var(--accent-soft);border-color:var(--accent);font-weight:600}
+.list li{display:flex;gap:.75rem;align-items:center}
+.lthumb{width:56px;height:56px;border-radius:10px;object-fit:cover;flex:none;background:var(--accent-soft)}
+.potd{display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in}
+.potd img{width:100%;max-height:260px;object-fit:cover;border-radius:10px;display:block;background:var(--accent-soft)}
+.panel .cap{color:var(--muted);font-size:.9rem;margin-top:.6rem}
+.discover{margin-top:2.5rem}
+.discover h2,.more h2{font-size:1.6rem;margin-bottom:.3rem}
+.more{margin-top:3rem;max-width:none}
+.feed{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-top:1rem}
+.fcard{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--text);content-visibility:auto;contain-intrinsic-size:auto 340px;transition:box-shadow .15s}
+.fcard:hover,.fcard:focus-visible{box-shadow:var(--shadow)}
+.fcard img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--accent-soft);display:block}
+.fcard .cb{padding:.8rem .9rem 1rem}
+.fcard h3{font:700 1.05rem/1.25 Charter,Georgia,serif}
+.fcard small{display:block;color:var(--accent);margin:.15rem 0 .35rem}
+.fcard p{color:var(--muted);font-size:.9rem;line-height:1.5}
+.sentinel{text-align:center;color:var(--muted);padding:1.5rem 0;min-height:3rem}
+.gallery{margin:0 0 1.5rem}
+.gallery h2{font:600 1.1rem Charter,Georgia,serif;margin-bottom:.5rem}
+.gstrip{display:flex;gap:.6rem;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:.5rem}
+.gstrip button{flex:none;border:0;padding:0;background:none;cursor:zoom-in;scroll-snap-align:start}
+.gstrip img{height:150px;min-width:90px;width:auto;display:block;background:var(--accent-soft);border-radius:10px}
+#lb{width:min(96vw,780px);text-align:center}
+#lb img{max-width:100%;max-height:68vh;object-fit:contain;border-radius:8px;background:var(--accent-soft)}
+#lb p{margin:.7rem 0 .2rem;color:var(--muted);font-size:.92rem}
+.lbbar{display:flex;gap:.5rem;justify-content:center;align-items:center;margin-top:.7rem;flex-wrap:wrap}
+.totop{position:fixed;right:max(.8rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));z-index:40;width:48px;height:48px;border-radius:50%;border:0;background:var(--accent);color:var(--on-accent);cursor:pointer;box-shadow:var(--shadow);display:grid;place-items:center;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+.totop svg{width:24px;height:24px}
+@media(prefers-reduced-motion:reduce){.totop{transition:none}}
+
+.fcard{position:relative}
+.fcard .fimg{display:block}
+.fcard .cb{display:block;color:inherit;text-decoration:none}
+.fcard .ph{display:grid;place-items:center;aspect-ratio:4/3;background:linear-gradient(135deg,var(--accent-soft),var(--line));color:var(--accent);font:700 3.2rem Charter,Georgia,serif}
+.heart{position:absolute;top:.6rem;right:.6rem;z-index:2;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#4a4f55;font-size:1.35rem;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.heart:hover{transform:scale(1.06)}
+.heart.on{color:#e0405a}
+.fhead{grid-column:1/-1;font:700 1.35rem Charter,Georgia,serif;margin-top:1rem}
+.bar{transition:transform .2s}
+.bar.hide{transform:translateY(-100%)}
+@media(prefers-reduced-motion:reduce){.bar{transition:none}}
+
+.results{max-height:72vh;overflow:auto;padding:.6rem;overscroll-behavior:contain}
+.results .fcard{margin-bottom:.7rem;content-visibility:visible}
+.results .fcard img,.results .fcard .ph{aspect-ratio:16/9}
+.results .fcard h3{font-size:1.1rem}
+.results>a.seeall{justify-content:center;font-weight:600;color:var(--accent);border-radius:10px}
+
+.navr{flex-wrap:wrap;justify-content:flex-end}
+.iconbtn svg{width:18px;height:18px;display:block}
+.agebtn{font-weight:600}
+.agebtn.on{background:#c0392b;border-color:#c0392b;color:#fff}
+.hidden-img{display:grid;place-items:center;min-height:90px;padding:.8rem;background:var(--accent-soft);color:var(--muted);border-radius:8px;font:.85rem system-ui,sans-serif;text-align:center}
+
+.srcbadge{display:inline-block;font-size:.72rem;font-weight:600;padding:.1rem .55rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-bottom:.4rem}
+.srcnote{color:var(--muted);font-size:.9rem;margin-top:.8rem}
+.fcard.ext .cb h3{overflow-wrap:anywhere}
+#loadExtWrap{margin-top:1rem}
+#loadExtWrap small{display:block;color:var(--muted);margin-top:.6rem;max-width:60ch}
+
+#lock{position:fixed;inset:0;z-index:1000;background:var(--bg);display:grid;place-items:center;padding:1.2rem;overflow:auto}
+#lock[hidden]{display:none}
+.lockbox{width:min(92vw,360px);text-align:center}
+.lockLogo{width:84px;height:84px;border-radius:22px;display:block;margin:0 auto}
+.lockbox h1{font:700 1.7rem Charter,Georgia,serif;margin:.8rem 0 .3rem}
+.lockbox p{color:var(--muted);margin-bottom:1rem}
+.lockbox input{width:100%;padding:.8rem 1rem;border:1px solid var(--line);border-radius:14px;background:var(--surface);font-size:1.4rem;letter-spacing:.5rem;text-align:center;margin-bottom:.6rem}
+.lockbox input::placeholder{letter-spacing:normal;font-size:1rem}
+.lockbox .btn{width:100%;padding:.8rem}
+#lockErr{color:#c0392b;min-height:1.4rem;margin:.2rem 0 .6rem;font-size:.92rem}
+.linkbtn{background:none;border:0;color:var(--accent);text-decoration:underline;cursor:pointer;margin-top:.8rem}
+body.locked>:not(#lock):not(script){visibility:hidden}
+#cover{position:fixed;inset:0;z-index:999;background:var(--bg);display:none;place-items:center}
+body.covered #cover{display:grid}
+body.covered>:not(#cover):not(#lock):not(script){visibility:hidden}
+#toast{position:fixed;left:50%;bottom:5.5rem;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:.6rem 1rem;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:1100;font-size:.92rem;max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%)}
+.setrow{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:.7rem 0}
+.setrow select{padding:.5rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.pinform{display:grid;gap:.6rem;max-width:320px;margin:.7rem 0}
+.pinform input{padding:.6rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:1.05rem}
+.page h3{font:600 1.1rem Charter,Georgia,serif;margin:1.4rem 0 .3rem}
+.danger{border-color:#c0392b;color:#c0392b}
+.setrow .iconbtn.on{background:var(--accent-soft);border-color:var(--accent);font-weight:600}
+.setrow label{min-width:6rem;color:var(--muted)}
+#ageBadge[hidden]{display:none}
+</style>
+</head>
+<body class="locked">
+<header class="bar"><div class="bar-in">
+  <a class="brand" href="#/" aria-label="Info Oasis home"><svg class='logo' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><clipPath id='c'><rect width='64' height='64' rx='16'/></clipPath></defs><g clip-path='url(#c)'><rect width='64' height='64' fill='#c4ecf8'/><circle cx='49' cy='16' r='7.5' fill='#ffd45e'/><circle cx='49' cy='16' r='7.5' fill='none' stroke='#f5b73a' stroke-width='1.5'/><path d='M0 44 Q8 39 16 44 T32 44 T48 44 T64 44 V64 H0Z' fill='#35bdb8'/><path d='M12 46 Q32 32 54 46 Q32 51 12 46Z' fill='#f4d78f' stroke='#c99a4a' stroke-width='1.2' stroke-linejoin='round'/><ellipse cx='42' cy='45.5' rx='5.5' ry='1.8' fill='#6fd6ea'/><path d='M0 54 Q8 50 16 54 T32 54 T48 54 T64 54 V64 H0Z' fill='#1d8f98'/><path d='M30 43 Q33 33 29 23' stroke='#8a5a2b' stroke-width='3.4' fill='none' stroke-linecap='round'/><g fill='#43b552' stroke='#2b8a3a' stroke-width='.8' stroke-linejoin='round'><path d='M29 23 Q20 17 12 24 Q21 21 29 23Z'/><path d='M29 23 Q26 12 18 10 Q25 15 29 23Z'/><path d='M29 23 Q34 11 43 13 Q36 16 29 23Z'/><path d='M29 23 Q38 20 46 28 Q37 25 29 23Z'/><path d='M29 23 Q21 27 18 35 Q24 28 29 23Z'/></g><circle cx='30.2' cy='24.2' r='2' fill='#7a4a1f'/><circle cx='27.4' cy='25' r='1.7' fill='#8a5a2b'/></g></svg><span>Info Oasis</span></a>
+  <div class="searchrow">
+    <div class="search">
+      <input id="q" type="search" placeholder="Search" autocomplete="off" aria-label="Search articles">
+      <div id="results" class="results"></div>
+    </div>
+    <select id="lang" aria-label="Language"></select>
+  </div>
+  <div class="navr">
+    <a class="iconbtn" href="#/" aria-label="Home" title="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg></a>
+    <button class="iconbtn" id="rand">Random</button>
+    <a class="iconbtn" href="#/library">Library</a>
+    <a class="iconbtn agebtn on" id="ageBadge" href="#/settings" hidden title="Safe Search is off. Tap to open Settings">18+ on</a>
+    <a class="iconbtn" id="settingsBtn" href="#/settings" aria-label="Settings" title="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h8M18 6h2M4 12h2M12 12h8M4 18h10M20 18h0"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></a>
+    <button class="iconbtn" id="aa" aria-expanded="false" aria-label="Reading tools">Aa</button>
+    <div class="pop" id="pop">
+      <h3>Text size</h3>
+      <div class="row"><button class="iconbtn" id="fsDown">A−</button><button class="iconbtn" id="fsUp">A+</button></div>
+      <h3>Theme</h3>
+      <div class="row wrap">
+        <button class="iconbtn" data-theme-set="auto">Auto</button>
+        <button class="iconbtn" data-theme-set="light">Light</button>
+        <button class="iconbtn" data-theme-set="sand">Sand</button>
+        <button class="iconbtn" data-theme-set="sky">Sky</button>
+        <button class="iconbtn" data-theme-set="mint">Mint</button>
+        <button class="iconbtn" data-theme-set="dark">Dark</button>
+      </div>
+      <div class="row"><button class="iconbtn" id="lockNow">Lock now</button></div>
+    </div>
+  </div>
+</div></header>
+
+<main class="wrap" id="app" aria-live="polite"></main>
+
+<div id="lock" role="dialog" aria-modal="true" aria-labelledby="lockTitle">
+  <div class="lockbox">
+    <img class="lockLogo" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='16'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url%28%23c%29'%3E%3Crect width='64' height='64' fill='%23c4ecf8'/%3E%3Ccircle cx='49' cy='16' r='7.5' fill='%23ffd45e'/%3E%3Ccircle cx='49' cy='16' r='7.5' fill='none' stroke='%23f5b73a' stroke-width='1.5'/%3E%3Cpath d='M0 44 Q8 39 16 44 T32 44 T48 44 T64 44 V64 H0Z' fill='%2335bdb8'/%3E%3Cpath d='M12 46 Q32 32 54 46 Q32 51 12 46Z' fill='%23f4d78f' stroke='%23c99a4a' stroke-width='1.2' stroke-linejoin='round'/%3E%3Cellipse cx='42' cy='45.5' rx='5.5' ry='1.8' fill='%236fd6ea'/%3E%3Cpath d='M0 54 Q8 50 16 54 T32 54 T48 54 T64 54 V64 H0Z' fill='%231d8f98'/%3E%3Cpath d='M30 43 Q33 33 29 23' stroke='%238a5a2b' stroke-width='3.4' fill='none' stroke-linecap='round'/%3E%3Cg fill='%2343b552' stroke='%232b8a3a' stroke-width='.8' stroke-linejoin='round'%3E%3Cpath d='M29 23 Q20 17 12 24 Q21 21 29 23Z'/%3E%3Cpath d='M29 23 Q26 12 18 10 Q25 15 29 23Z'/%3E%3Cpath d='M29 23 Q34 11 43 13 Q36 16 29 23Z'/%3E%3Cpath d='M29 23 Q38 20 46 28 Q37 25 29 23Z'/%3E%3Cpath d='M29 23 Q21 27 18 35 Q24 28 29 23Z'/%3E%3C/g%3E%3Ccircle cx='30.2' cy='24.2' r='2' fill='%237a4a1f'/%3E%3Ccircle cx='27.4' cy='25' r='1.7' fill='%238a5a2b'/%3E%3C/g%3E%3C/svg%3E">
+    <h1 id="lockTitle">Info Oasis</h1>
+    <p id="lockMsg"></p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" autocomplete="off" aria-label="PIN" placeholder="PIN">
+    <input id="pin2" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" autocomplete="off" aria-label="Confirm PIN" placeholder="Confirm PIN" hidden>
+    <p id="lockErr" role="alert"></p>
+    <button class="btn" id="lockBtn">Unlock</button>
+    <button class="linkbtn" id="lockForgot" hidden>Forgot PIN?</button>
+    <noscript><p>Info Oasis needs JavaScript to run.</p></noscript>
+  </div>
+</div>
+<div id="cover" aria-hidden="true"><img class="lockLogo" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect width='64' height='64' rx='16'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url%28%23c%29'%3E%3Crect width='64' height='64' fill='%23c4ecf8'/%3E%3Ccircle cx='49' cy='16' r='7.5' fill='%23ffd45e'/%3E%3Ccircle cx='49' cy='16' r='7.5' fill='none' stroke='%23f5b73a' stroke-width='1.5'/%3E%3Cpath d='M0 44 Q8 39 16 44 T32 44 T48 44 T64 44 V64 H0Z' fill='%2335bdb8'/%3E%3Cpath d='M12 46 Q32 32 54 46 Q32 51 12 46Z' fill='%23f4d78f' stroke='%23c99a4a' stroke-width='1.2' stroke-linejoin='round'/%3E%3Cellipse cx='42' cy='45.5' rx='5.5' ry='1.8' fill='%236fd6ea'/%3E%3Cpath d='M0 54 Q8 50 16 54 T32 54 T48 54 T64 54 V64 H0Z' fill='%231d8f98'/%3E%3Cpath d='M30 43 Q33 33 29 23' stroke='%238a5a2b' stroke-width='3.4' fill='none' stroke-linecap='round'/%3E%3Cg fill='%2343b552' stroke='%232b8a3a' stroke-width='.8' stroke-linejoin='round'%3E%3Cpath d='M29 23 Q20 17 12 24 Q21 21 29 23Z'/%3E%3Cpath d='M29 23 Q26 12 18 10 Q25 15 29 23Z'/%3E%3Cpath d='M29 23 Q34 11 43 13 Q36 16 29 23Z'/%3E%3Cpath d='M29 23 Q38 20 46 28 Q37 25 29 23Z'/%3E%3Cpath d='M29 23 Q21 27 18 35 Q24 28 29 23Z'/%3E%3C/g%3E%3Ccircle cx='30.2' cy='24.2' r='2' fill='%237a4a1f'/%3E%3Ccircle cx='27.4' cy='25' r='1.7' fill='%238a5a2b'/%3E%3C/g%3E%3C/svg%3E"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="saveDlg">
+  <h2>Save to library</h2>
+  <p id="dlgTitle" style="font-weight:600"></p>
+  <label for="dlgFolder">Folder</label>
+  <select id="dlgFolder"></select>
+  <div id="dlgNewWrap" hidden>
+    <label for="dlgNew">New folder name</label>
+    <input id="dlgNew" type="text" maxlength="60">
+  </div>
+  <label for="dlgNote">Your notes on this article (optional)</label>
+  <textarea id="dlgNote" maxlength="2000"></textarea>
+  <div class="dlgbtns">
+    <button class="iconbtn" id="dlgCancel">Cancel</button>
+    <button class="btn" id="dlgSave">Save</button>
+  </div>
+</dialog>
+
+<dialog id="ageDlg">
+  <h2>Turn off Safe Search?</h2>
+  <p>This lets adult topics and nudity appear in results and articles. Only continue if you are 18 or older and allowed to view this where you live.</p>
+  <p style="color:var(--muted);font-size:.9rem;margin-top:.6rem">Illegal content and anything involving minors stays blocked either way. Safe Search turns back on whenever you reload the page.</p>
+  <div class="dlgbtns"><button class="iconbtn" id="ageNo">Keep it on</button><button class="btn" id="ageYes">I’m 18+, turn it off</button></div>
+</dialog>
+
+<dialog id="lb">
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+  <div class="lbbar">
+    <button class="iconbtn" id="lbPrev" aria-label="Previous picture">‹ Prev</button>
+    <a class="iconbtn" id="lbLink" target="_blank" rel="noopener noreferrer">Source and license</a>
+    <button class="iconbtn" id="lbNext" aria-label="Next picture">Next ›</button>
+    <button class="btn" id="lbClose">Close</button>
+  </div>
+</dialog>
+
+<button class="totop" id="toTop" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<footer>
+  <nav>
+    <a href="#/about">About</a><a href="#/privacy">Privacy</a><a href="#/sources">Sources</a><a href="#/library">Library</a><a href="#/settings">Settings</a>
+  </nav>
+  Info Oasis · private research browsing. Credits and licenses are listed with each article and on the Sources page.
+</footer>
+
+<script>
+// @ts-nocheck
+const LANGS = [["en","English"],["simple","Simple English"],["es","Español"],["fr","Français"],["de","Deutsch"],["it","Italiano"],["pt","Português"],["nl","Nederlands"],["pl","Polski"],["sv","Svenska"],["ru","Русский"],["uk","Українська"],["tr","Türkçe"],["ar","العربية"],["hi","हिन्दी"],["ja","日本語"],["ko","한국어"],["zh","中文"]];
+/* ---------- Saved settings (the only things kept on this phone: PIN hash, theme, text size, language, auto-lock) ---------- */
+const store = (() => {
+  const mem = {}; let ok = true;
+  try { localStorage.setItem("infooasis.t", "1"); localStorage.removeItem("infooasis.t"); } catch { ok = false; }
+  return {
+    ok,
+    get(k) { try { const v = ok ? localStorage.getItem("infooasis." + k) : mem[k]; return v ? JSON.parse(v) : null; } catch { return null; } },
+    set(k, v) { const t = JSON.stringify(v); try { ok ? localStorage.setItem("infooasis." + k, t) : (mem[k] = t); } catch {} },
+    del(k) { try { ok ? localStorage.removeItem("infooasis." + k) : delete mem[k]; } catch {} }
+  };
+})();
+const settings = Object.assign({ theme: "auto", fs: 1.08, lang: "en", lock: 0 }, store.get("settings") || {});
+if (!["auto", "light", "sand", "sky", "mint", "dark"].includes(settings.theme)) settings.theme = "auto";
+settings.fs = Math.min(1.7, Math.max(.9, +settings.fs || 1.08));
+settings.lock = [0, 1, 5, 15].includes(+settings.lock) ? +settings.lock : 0;
+if (!LANGS.some(l => l[0] === settings.lang)) settings.lang = "en";
+const saveSettings = () => store.set("settings", settings);
+
+const state = { safe: true, groups: new Set(["wiki", "gov", "sci", "books", "art"]), query: "", lang: settings.lang, lib: { folders: [] }, dirty: false, current: null, notice: "", fs: settings.fs, theme: settings.theme, uid: 0 };
+const $ = (s, r = document) => r.querySelector(s);
+const app = $("#app");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fix = u => u && u.startsWith("//") ? "https:" + u : u;
+const host = l => `https://${l}.wikipedia.org`;
+const api = () => host(state.lang);
+const enc = encodeURIComponent;
+const underscore = t => t.replace(/ /g, "_");
+const ext = 'target="_blank" rel="noopener noreferrer"';
+const opts = { credentials: "omit", referrerPolicy: "no-referrer" };
+const artHash = (l, t) => `#/a/${l}/${enc(underscore(t))}`;
+const searchHash = (l, t) => `#/s/${l}/${enc(t)}`;
+
+/* ---------- Content filters ----------
+   HARD: always on, cannot be turned off. Anything that points to sexual content involving minors.
+   Safe Search: on by default, turned off in Settings. Hides adult topics and nudity. */
+const normTxt = s => { try { s = decodeURIComponent(s); } catch {} return String(s).replace(/[_\-./]+/g, " "); };
+const HARD_CATS = ["Child pornography", "Child sexual abuse material"];
+const BLOCK_CATS = ["Pornography", "Erotica", "Sexual acts", "Sex positions", "Sex industry", "Pornographic films", "Fetishism", "BDSM", "Prostitution", "Strip clubs", "Hentai", "Erotic literature", "Sex toys", "Pornographic film studios", "Sexual fetishism"];
+const NOPIC_CATS = ["Nudity", "Nude paintings", "Nude sculptures", "Nude photography", "Naturism", "Nudism"];
+const ALL_CATS = [...HARD_CATS, ...BLOCK_CATS, ...NOPIC_CATS].map(c => "Category:" + c);
+const MINOR_W = "(?:underage|minors?|child|children|kids?|teens?|teenage\\w*|preteens?|pre-teens?|boys?|girls?|schoolgirls?|schoolboys?|infants?|toddlers?)";
+const SEX_W = "(?:nude|nudes|nudity|naked|topless|erotic\\w*|porn\\w*|sexually explicit|sex tapes?|lewd|obscene)";
+const HARD_PAIR = new RegExp(`\\b${MINOR_W}\\b(?:\\W+\\w+){0,3}?\\W+${SEX_W}\\b|\\b${SEX_W}\\b(?:\\W+\\w+){0,3}?\\W+${MINOR_W}\\b`, "i");
+const HARD_RE = /\b(child pornograph\w*|child sexual abuse materials?|csam)\b/i;
+const MINOR_CTX = /\b(child|children|minors?|teens?|teenage\w*|boys?|girls?|kids?|infants?|toddlers?|schoolchildren|youth)\b/i;
+const BLOCK_RE = /\b(porn\w*|hentai|nsfw|xxx|erotic\w*|fetish\w*|bdsm|onlyfans|camgirls?|adult films?|adult entertainment|adult videos?|sex tapes?|sex toys?|strip clubs?|strippers?|striptease|sexually explicit|prostitut\w*|sex work\w*|sex positions?|orgasm\w*|masturbat\w*|sexual intercourse|fellatio|cunnilingus|anal sex|oral sex|erogenous|brothels?|dominatrix)\b/i;
+const BLOCK_INTL = /(порно|ポルノ|色情|成人影片|포르노|pornograf|pornogra|erótic|erotik)/i;
+const NUDE_RE = /\b(nude|nudes|nudity|nudist\w*|nudism|topless|naturis[tm])\b/i;
+const NUDE_IMG = /\b(nude|nudes|nudity|naked|topless|nsfw|erotic\w*|porn\w*|hentai|lingerie|striptease|stripper|playboy)\b/i;
+const RANK = { ok: 0, nopic: 1, block: 2, hard: 3 };
+const checkCache = new Map();
+function classify(p) {
+  const cats = (p.categories || []).map(c => c.title.replace(/^[^:]+:/, ""));
+  const txt = `${p.title || ""} ${p.terms?.description?.[0] || ""}`, full = txt + " " + (p.extract || "");
+  if (cats.some(c => HARD_CATS.includes(c)) || HARD_RE.test(full) || HARD_PAIR.test(full)) return "hard";
+  if (cats.some(c => BLOCK_CATS.includes(c)) || BLOCK_RE.test(full) || BLOCK_INTL.test(full)) return "block";
+  if (cats.some(c => NOPIC_CATS.includes(c)) || NUDE_RE.test(txt)) return "nopic";
+  return "ok";
+}
+const keep = lvl => lvl !== "hard" && !(state.safe && lvl === "block");
+const picOk = lvl => lvl === "ok" || (!state.safe && lvl === "nopic");
+const sf = (title, desc) => classify({ title, terms: { description: [desc || ""] } });
+const isHardQuery = v => HARD_RE.test(v) || HARD_PAIR.test(v);
+const REPORT = `If you ever come across illegal content, don’t share it. Report it to the <a href="https://report.cybertip.org" target="_blank" rel="noopener noreferrer">NCMEC CyberTipline</a> (US) or the <a href="https://report.iwf.org.uk" target="_blank" rel="noopener noreferrer">Internet Watch Foundation</a>, or contact local law enforcement.`;
+const UNAVAILABLE = `<div class="state"><h2>This isn’t available</h2><p>Info Oasis never shows content involving the sexual exploitation of minors. This filter is always on and can’t be turned off.</p><p>${REPORT}</p></div>`;
+async function checkTitle(title) {
+  const key = state.lang + ":" + underscore(title);
+  if (checkCache.has(key)) return checkCache.get(key);
+  let res = { lvl: classify({ title }), minor: MINOR_CTX.test(title) };
+  try {
+    const d = await j(`${api()}/w/api.php?action=query&format=json&formatversion=2&origin=*&redirects=1&titles=${enc(title)}&prop=extracts%7Cpageterms%7Ccategories&exintro=1&explaintext=1&exsentences=3&wbptterms=description&cllimit=max&clcategories=${enc(ALL_CATS.join("|"))}`);
+    const pg = d.query?.pages?.[0];
+    if (pg && !pg.missing) {
+      const l2 = classify(pg);
+      res = { lvl: RANK[l2] > RANK[res.lvl] ? l2 : res.lvl, minor: res.minor || MINOR_CTX.test(pg.title + " " + (pg.terms?.description?.[0] || "")) };
+    }
+  } catch {}
+  checkCache.set(key, res);
+  return res;
+}
+function filterImages(root, lvl, minor) {
+  root.querySelectorAll("img").forEach(im => {
+    if (im.closest(".mwe-math-element")) return;
+    const fig = im.closest("figure");
+    const t = normTxt([im.getAttribute("resource") || "", im.getAttribute("src") || "", im.getAttribute("alt") || "", fig?.querySelector("figcaption")?.textContent || ""].join(" "));
+    let why = "";
+    if (HARD_PAIR.test(t) || HARD_RE.test(t) || (minor && NUDE_IMG.test(t))) why = "Image not available";
+    else if (state.safe && (lvl === "nopic" || NUDE_IMG.test(t))) why = "Image hidden by Safe Search";
+    if (why) { const ph = document.createElement("span"); ph.className = "hidden-img"; ph.textContent = why; im.replaceWith(ph); }
+  });
+}
+
+async function j(url, signal) {
+  const r = await fetch(url, signal ? { ...opts, signal } : opts);
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
+}
+
+/* ---------- Header: language, search, tools ---------- */
+const langSel = $("#lang");
+langSel.innerHTML = LANGS.map(([c, n]) => `<option value="${c}">${esc(n)}</option>`).join("");
+
+langSel.addEventListener("change", async () => {
+  const old = state.lang, nw = langSel.value;
+  settings.lang = nw; saveSettings();
+  if (!state.current && state.query && /^#\/s\//.test(location.hash)) { state.lang = nw; location.hash = searchHash(nw, state.query); return; }
+  if (state.current) {
+    try {
+      const d = await j(`${host(old)}/w/api.php?action=query&prop=langlinks&titles=${enc(state.current)}&lllang=${nw}&redirects=1&format=json&origin=*`);
+      const ll = Object.values(d.query.pages)[0].langlinks?.[0];
+      if (ll) { state.lang = nw; location.hash = artHash(nw, ll["*"]); return; }
+    } catch {}
+    state.notice = "That article doesn’t exist in the language you picked, so here is the home page instead.";
+  }
+  state.lang = nw;
+  if (location.hash === "#/" || !location.hash) home(); else location.hash = "#/";
+});
+
+const q = $("#q"), box = $("#results");
+let timer, sCtl;
+const searchCache = new Map(), feedCache = new Map();
+q.addEventListener("input", () => {
+  clearTimeout(timer);
+  const v = q.value.trim();
+  if (!v || isHardQuery(v)) { box.classList.remove("open"); return; }
+  timer = setTimeout(async () => {
+    try {
+      const sk = state.lang + ":" + v.toLowerCase();
+      let pages = searchCache.get(sk);
+      if (!pages) {
+        sCtl?.abort(); sCtl = new AbortController();
+        pages = await fetchCards({ kind: "prefix", q: v, limit: 6 }, { offset: 0, done: false });
+        if (!pages.length) pages = await fetchCards({ kind: "search", q: v, limit: 6 }, { offset: 0, done: false });
+        if (q.value.trim() !== v) return; // a newer search replaced this one
+        searchCache.set(sk, pages);
+      }
+      box.innerHTML = pages.map(cardHtml).join("") + `<a class="seeall" href="${searchHash(state.lang, v)}">See all results for “${esc(v)}”</a>`;
+      box.classList.add("open");
+    } catch (e) { if (e.name !== "AbortError") box.classList.remove("open"); }
+  }, 150);
+});
+q.addEventListener("keydown", e => {
+  if (e.key === "Enter" && q.value.trim()) { location.hash = searchHash(state.lang, q.value.trim()); box.classList.remove("open"); q.blur(); }
+  if (e.key === "Escape") box.classList.remove("open");
+});
+box.addEventListener("click", e => {
+  const hb = e.target.closest("[data-save]");
+  if (hb) { e.preventDefault(); openSave({ lang: hb.dataset.lang, id: hb.dataset.id, title: hb.dataset.title, url: hb.dataset.url, source: hb.dataset.source }); return; }
+  box.classList.remove("open"); q.value = "";
+});
+document.addEventListener("click", e => {
+  if (!e.target.closest(".search")) box.classList.remove("open");
+  if (!e.target.closest(".navr")) { $("#pop").classList.remove("open"); $("#aa").setAttribute("aria-expanded", "false"); }
+});
+$("#rand").onclick = async () => {
+  try {
+    for (let i = 0; i < 3; i++) {
+      const pages = await fetchCards({ kind: "random" }, { offset: 0, done: false });
+      if (pages.length) { location.hash = artHash(state.lang, pages[Math.floor(Math.random() * pages.length)].title); return; }
+    }
+  } catch {}
+};
+
+$("#aa").onclick = () => {
+  const p = $("#pop"); p.classList.toggle("open");
+  $("#aa").setAttribute("aria-expanded", p.classList.contains("open"));
+};
+function applyReading() {
+  document.documentElement.style.setProperty("--fs", state.fs + "rem");
+  if (state.theme === "auto") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.dataset.theme = state.theme;
+  document.querySelectorAll("[data-theme-set]").forEach(b => b.classList.toggle("on", b.dataset.themeSet === state.theme));
+}
+$("#fsUp").onclick = () => { state.fs = Math.min(1.7, +(state.fs + .1).toFixed(2)); applyReading(); settings.fs = state.fs; saveSettings(); };
+$("#fsDown").onclick = () => { state.fs = Math.max(.9, +(state.fs - .1).toFixed(2)); applyReading(); settings.fs = state.fs; saveSettings(); };
+document.querySelectorAll("[data-theme-set]").forEach(b => b.onclick = () => { state.theme = b.dataset.themeSet; applyReading(); settings.theme = state.theme; saveSettings(); });
+applyReading();
+
+/* ---------- 18+ toggle (Safe Search) ---------- */
+const ageBadge = $("#ageBadge"), ageDlg = $("#ageDlg");
+function setSafe(on) {
+  state.safe = on;
+  ageBadge.hidden = on;
+  searchCache.clear(); feedCache.clear(); checkCache.clear();
+  box.classList.remove("open");
+  route();
+}
+$("#ageNo").onclick = () => ageDlg.close();
+$("#ageYes").onclick = () => { ageDlg.close(); setSafe(false); };
+
+/* ---------- Lightbox ---------- */
+const lb = $("#lb");
+let lbList = [], lbI = 0, galleryItems = [], potdItem = [];
+function showLb(i) {
+  lbI = (i + lbList.length) % lbList.length;
+  const g = lbList[lbI];
+  $("#lbImg").src = g.full; $("#lbImg").alt = g.cap || g.name;
+  $("#lbCap").textContent = g.cap || g.name;
+  $("#lbLink").href = g.page;
+  $("#lbPrev").hidden = $("#lbNext").hidden = lbList.length < 2;
+}
+function openLb(list, i) { lbList = list; showLb(i); lb.showModal(); }
+$("#lbPrev").onclick = () => showLb(lbI - 1);
+$("#lbNext").onclick = () => showLb(lbI + 1);
+$("#lbClose").onclick = () => lb.close();
+lb.addEventListener("close", () => { $("#lbImg").removeAttribute("src"); });
+lb.addEventListener("click", e => { const r = lb.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) lb.close(); });
+lb.addEventListener("keydown", e => { if (e.key === "ArrowLeft") showLb(lbI - 1); if (e.key === "ArrowRight") showLb(lbI + 1); });
+
+/* ---------- Back to top ---------- */
+const toTop = $("#toTop");
+let ticking = false, lastY = 0;
+const bar = $(".bar");
+addEventListener("scroll", () => {
+  if (ticking) return; ticking = true;
+  requestAnimationFrame(() => {
+    const y = scrollY, dy = y - lastY;
+    toTop.classList.toggle("show", y > 700);
+    const busy = document.activeElement === q || $("#pop").classList.contains("open") || box.classList.contains("open");
+    if (y > 160 && dy > 8 && !busy) bar.classList.add("hide");
+    else if (dy < -8 || y <= 160) bar.classList.remove("hide");
+    lastY = y; ticking = false;
+  });
+}, { passive: true });
+toTop.onclick = () => scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion:reduce)").matches ? "auto" : "smooth" });
+
+/* ---------- Infinite feed of articles with pictures ---------- */
+const activeFeeds = new Set();
+const MAX_CARDS = 300;
+function cardHtml(p) {
+  const d = p.terms?.description?.[0] || "", ex = p.extract || "";
+  const id = underscore(p.title), href = artHash(state.lang, p.title), on = !!findSaved(keyFor(state.lang, id));
+  const pic = p.thumbnail
+    ? `<img src="${esc(p.thumbnail.source)}" alt="" loading="lazy" decoding="async">`
+    : `<span class="ph" aria-hidden="true">${esc([...p.title][0] || "")}</span>`;
+  return `<div class="fcard"><a class="fimg" href="${href}" tabindex="-1" aria-hidden="true">${pic}</a>
+    <button class="heart${on ? " on" : ""}" data-save data-lang="${state.lang}" data-id="${esc(id)}" data-title="${esc(p.title)}" aria-label="${on ? "Saved. Tap to change folder" : "Save to a folder"}">${on ? "♥" : "♡"}</button>
+    <a class="cb" href="${href}"><h3>${esc(p.title)}</h3>${d ? `<small>${esc(d)}</small>` : ""}<p>${esc(ex.slice(0, 160))}${ex.length > 160 ? "…" : ""}</p></a></div>`;
+}
+async function fetchCards(src, st) {
+  let url = `${api()}/w/api.php?action=query&format=json&formatversion=2&origin=*&prop=pageimages%7Cextracts%7Cpageterms%7Ccategories&piprop=thumbnail&pithumbsize=480&pilimit=max&exintro=1&explaintext=1&exsentences=2&exlimit=max&wbptterms=description&cllimit=max&clcategories=${enc(ALL_CATS.join("|"))}`;
+  if (src.kind === "random") url += `&generator=random&grnnamespace=0&grnlimit=20`;
+  else if (src.kind === "prefix") { url += `&generator=prefixsearch&gpssearch=${enc(src.q)}&gpsnamespace=0&gpslimit=${src.limit || 6}`; st.done = true; }
+  else {
+    const term = src.kind === "search" ? src.q : "morelike:" + src.title;
+    url += `&generator=search&gsrsearch=${enc(term)}&gsrnamespace=0&gsrlimit=${src.limit || 20}&gsroffset=${st.offset}`;
+  }
+  const d = await j(url);
+  if (src.kind === "search" || src.kind === "more") { if (d.continue?.gsroffset != null) st.offset = d.continue.gsroffset; else st.done = true; }
+  return (d.query?.pages || []).slice().sort((x, y) => (x.index || 0) - (y.index || 0)).filter(pg => {
+    const lvl = classify(pg);
+    if (lvl === "hard") return false;
+    if (state.safe) { if (lvl === "block") return false; if (lvl === "nopic") pg.thumbnail = null; }
+    else if (lvl === "nopic" && MINOR_CTX.test(pg.title + " " + (pg.terms?.description?.[0] || ""))) pg.thumbnail = null;
+    return true;
+  });
+}
+// src: { kind: "random" | "search" | "more", pics: false to include results without pictures, then: (firstTitle) => next src }
+/* ---------- Other trusted sources ---------- */
+const GROUP_LABEL = { gov: "Government", sci: "Research", books: "Book", art: "Art" };
+const GROUPS = { wiki: "Encyclopedia", gov: "Government", sci: "Research", books: "Books", art: "Art & museums" };
+const strip = h => String(h || "").replace(/<[^>]*>/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/\s+/g, " ").trim();
+const clip = (t, n) => t.length > n ? t.slice(0, n).replace(/\s+\S*$/, "") + "…" : t;
+async function jx(url, asText) {
+  const c = new AbortController(), t = setTimeout(() => c.abort(), 9000);
+  try {
+    const r = await fetch(url, { ...opts, signal: c.signal });
+    if (!r.ok) throw new Error(r.status);
+    return asText ? await r.text() : await r.json();
+  } finally { clearTimeout(t); }
+}
+const metIds = new Map();
+const PROVIDERS = {
+  nasa: { name: "NASA", group: "gov", site: "https://images.nasa.gov", about: "images from NASA’s archive (U.S. government)",
+    run: async (q, pg) => (await jx(`https://images-api.nasa.gov/search?q=${enc(q)}&media_type=image&page=${pg + 1}&page_size=6`)).collection?.items?.map(i => { const m = i.data?.[0] || {};
+      return { title: strip(m.title), desc: clip(strip(m.description), 180), meta: [m.center, (m.date_created || "").slice(0, 4)].filter(Boolean).join(" · "), url: `https://images.nasa.gov/details/${enc(m.nasa_id || "")}`, img: i.links?.[0]?.href }; }) || [] },
+  datagov: { name: "Data.gov", group: "gov", site: "https://data.gov", about: "datasets published by U.S. federal agencies",
+    run: async (q, pg) => ((await jx(`https://catalog.data.gov/api/3/action/package_search?q=${enc(q)}&rows=6&start=${pg * 6}`)).result?.results || []).map(r => ({ title: strip(r.title), desc: clip(strip(r.notes), 180), meta: (r.organization?.title || "U.S. government dataset"), url: `https://catalog.data.gov/dataset/${enc(r.name || "")}` })) },
+  loc: { name: "Library of Congress", group: "gov", site: "https://www.loc.gov", about: "historical documents, maps, and photographs (U.S. government)",
+    run: async (q, pg) => ((await jx(`https://www.loc.gov/search/?q=${enc(q)}&fo=json&c=6&sp=${pg + 1}`)).results || []).map(r => ({ title: strip(r.title), desc: clip(strip([].concat(r.description || []).join(" ")), 180), meta: [r.date].filter(Boolean).join(" · "), url: String(r.id || r.url || "").replace(/^http:/, "https:"), img: fix([].concat(r.image_url || [])[0]) })) },
+  medline: { name: "MedlinePlus", group: "gov", site: "https://medlineplus.gov", about: "plain-language health topics from the U.S. National Library of Medicine",
+    run: async (q, pg) => { if (pg > 0) return [];
+      const doc = new DOMParser().parseFromString(await jx(`https://wsearch.nlm.nih.gov/ws/query?db=healthTopics&term=${enc(q)}&retmax=4`, true), "text/xml");
+      return [...doc.querySelectorAll("document")].map(dn => { const c = n => strip(dn.querySelector(`content[name="${n}"]`)?.textContent);
+        return { title: c("title"), desc: clip(c("FullSummary") || c("snippet"), 200), meta: "Health topic", url: (dn.getAttribute("url") || "").replace(/^http:/, "https:") }; }); } },
+  pubmed: { name: "PubMed", group: "sci", site: "https://pubmed.ncbi.nlm.nih.gov", about: "biomedical research papers (U.S. National Institutes of Health)",
+    run: async (q, pg) => { const ids = (await jx(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=6&retstart=${pg * 6}&sort=relevance&term=${enc(q)}`)).esearchresult?.idlist || [];
+      if (!ids.length) return [];
+      const d = await jx(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=${ids.join(",")}`);
+      return ids.map(id => d.result?.[id]).filter(Boolean).map(r => ({ title: strip(r.title), desc: (r.authors || []).slice(0, 3).map(a => a.name).join(", ") + ((r.authors || []).length > 3 ? " et al." : ""),
+        meta: [r.source, (r.pubdate || "").slice(0, 4)].filter(Boolean).join(" · "), url: `https://pubmed.ncbi.nlm.nih.gov/${r.uid}/` })); } },
+  openalex: { name: "OpenAlex", group: "sci", site: "https://openalex.org", about: "an open index of scholarly papers in every field",
+    run: async (q, pg) => ((await jx(`https://api.openalex.org/works?search=${enc(q)}&per-page=6&page=${pg + 1}&select=id,title,publication_year,doi,primary_location,authorships,abstract_inverted_index`)).results || []).map(w => {
+      let ab = ""; const inv = w.abstract_inverted_index;
+      if (inv) { const arr = []; for (const [word, pos] of Object.entries(inv)) for (const x of pos) arr[x] = word; ab = arr.filter(Boolean).join(" "); }
+      const au = (w.authorships || []).slice(0, 3).map(a => a.author?.display_name).filter(Boolean).join(", ");
+      return { title: strip(w.title), desc: clip(ab || au, 200), meta: [ab ? au : "", w.primary_location?.source?.display_name, w.publication_year].filter(Boolean).join(" · "), url: w.doi || w.id }; }) },
+  openlib: { name: "Open Library", group: "books", site: "https://openlibrary.org", about: "books and editions, run by the Internet Archive",
+    run: async (q, pg) => ((await jx(`https://openlibrary.org/search.json?q=${enc(q)}&limit=6&page=${pg + 1}&fields=key,title,author_name,first_publish_year,cover_i`)).docs || []).map(b => ({ title: b.title, desc: (b.author_name || []).slice(0, 3).join(", "), meta: ["Book", b.first_publish_year].filter(Boolean).join(" · "), url: `https://openlibrary.org${b.key}`, img: b.cover_i ? `https://covers.openlibrary.org/b/id/${b.cover_i}-M.jpg` : null })) },
+  gutenberg: { name: "Project Gutenberg", group: "books", site: "https://www.gutenberg.org", about: "free classic books in the public domain",
+    run: async (q, pg) => ((await jx(`https://gutendex.com/books/?search=${enc(q)}&page=${pg + 1}`)).results || []).slice(0, 6).map(b => ({ title: b.title, desc: (b.authors || []).map(a => a.name).slice(0, 3).join("; "), meta: "Free book", url: `https://www.gutenberg.org/ebooks/${b.id}`, img: b.formats?.["image/jpeg"] })) },
+  aic: { name: "Art Institute of Chicago", group: "art", site: "https://www.artic.edu", about: "artworks from the museum’s public collection",
+    run: async (q, pg) => { const d = await jx(`https://api.artic.edu/api/v1/artworks/search?q=${enc(q)}&limit=6&page=${pg + 1}&fields=id,title,artist_display,date_display,image_id,term_titles`);
+      const iiif = d.config?.iiif_url || "https://www.artic.edu/iiif/2";
+      return (d.data || []).map(a => ({ title: a.title, desc: strip(a.artist_display || "").split(" ").length ? clip(strip(a.artist_display || ""), 120) : "", meta: [a.date_display].filter(Boolean).join(" · "), url: `https://www.artic.edu/artworks/${a.id}`, img: a.image_id ? `${iiif}/${a.image_id}/full/400,/0/default.jpg` : null, tags: (a.term_titles || []).join(" ") })); } },
+  met: { name: "The Met", group: "art", site: "https://www.metmuseum.org", about: "open-access artworks from The Metropolitan Museum of Art",
+    run: async (q, pg) => { let ids = metIds.get(q);
+      if (!ids) { ids = (await jx(`https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=${enc(q)}`)).objectIDs || []; metIds.set(q, ids); }
+      const objs = await Promise.all(ids.slice(pg * 4, pg * 4 + 4).map(id => jx(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`).catch(() => null)));
+      return objs.filter(Boolean).map(o => ({ title: o.title, desc: [o.artistDisplayName, o.objectDate].filter(Boolean).join(", "), meta: [o.classification || o.objectName].filter(Boolean).join(" · "), url: o.objectURL, img: o.primaryImageSmall || null, tags: (o.tags || []).map(t => t.term).join(" ") })); } }
+};
+// Same filters as Wikipedia results: minors-related content is always removed; Safe Search handles adult topics and nudity.
+function acceptItem(it) {
+  if (!it.title || !/^https:\/\//.test(it.url || "")) return false;
+  const tags = it.tags || "";
+  const lvl = classify({ title: it.title, terms: { description: [it.desc || ""] }, extract: (it.desc || "") + " " + tags });
+  if (lvl === "hard") return false;
+  const nude = NUDE_RE.test(it.title + " " + tags) || NUDE_IMG.test(normTxt(it.title + " " + tags));
+  if (state.safe) { if (lvl === "block") return false; if (lvl === "nopic" || nude) it.img = null; }
+  else if ((lvl === "nopic" || nude) && MINOR_CTX.test(it.title + " " + (it.desc || "") + " " + tags)) it.img = null;
+  return true;
+}
+async function runProvider(id, q, pg) {
+  const P = PROVIDERS[id], raw = await P.run(q, pg);
+  return { raw: raw.length, items: raw.map(it => ({ ...it, source: P.name, group: P.group })).filter(acceptItem) };
+}
+function extCardHtml(it) {
+  const pic = it.img ? `<img src="${esc(fix(it.img))}" alt="" loading="lazy" decoding="async">` : `<span class="ph" aria-hidden="true">${esc([...it.title][0] || "")}</span>`;
+  const on = !!findSaved(keyFor("ext", it.url)), u = esc(it.url);
+  return `<div class="fcard ext"><a class="fimg" href="${u}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${pic}</a>
+    <button class="heart${on ? " on" : ""}" data-save data-lang="ext" data-id="${u}" data-title="${esc(it.title)}" data-url="${u}" data-source="${esc(GROUP_LABEL[it.group] || "Source")}" aria-label="${on ? "Saved. Tap to change folder" : "Save to a folder"}">${on ? "♥" : "♡"}</button>
+    <a class="cb" href="${u}" target="_blank" rel="noopener noreferrer"><span class="srcbadge">${esc(GROUP_LABEL[it.group] || "Source")}</span><h3>${esc(it.title)}</h3>${it.meta ? `<small>${esc(it.meta)}</small>` : ""}<p>${esc(it.desc || "")}</p></a></div>`;
+}
+
+function startFeed(box, src) {
+  box._feed?.stop();
+  const ctl = { stopped: false, io: null, stop() { this.stopped = true; this.io?.disconnect(); activeFeeds.delete(this); } };
+  box._feed = ctl; activeFeeds.add(ctl);
+  box.innerHTML = `${src.kind === "multi" ? `<p class="srcnote" role="status"></p>` : ""}<div class="feed"></div><div class="sentinel" role="status"></div>`;
+  const feed = $(".feed", box), sent = $(".sentinel", box), note = $(".srcnote", box);
+  const st = { offset: 0, done: false, busy: false, final: false, count: 0, seen: new Set(), first: null, wiki: { offset: 0, done: false }, ps: {}, failed: new Set() };
+  let cur = src, io = null;
+  const stale = () => ctl.stopped;
+
+  async function multiRound() {
+    let n = 0;
+    const jobs = [];
+    if (cur.groups.has("wiki") && !st.wiki.done) jobs.push((async () => {
+      const pages = await fetchCards({ kind: "search", q: cur.q }, st.wiki);
+      if (stale()) return;
+      let html = "";
+      for (const pg of pages) {
+        if (st.seen.has(pg.pageid)) continue;
+        if (st.first == null) st.first = pg.title;
+        st.seen.add(pg.pageid); html += cardHtml(pg); n++; st.count++;
+      }
+      feed.insertAdjacentHTML("beforeend", html);
+    })().catch(() => { st.wiki.done = true; st.failed.add("Wikipedia"); }));
+    const enabled = Object.entries(PROVIDERS).filter(([, P]) => cur.groups.has(P.group));
+    for (const [id, P] of enabled) {
+      const ps = st.ps[id] ||= { page: 0, done: false };
+      if (ps.done) continue;
+      jobs.push((async () => {
+        const r = await runProvider(id, cur.q, ps.page);
+        if (stale()) return;
+        ps.page++; if (!r.raw) ps.done = true;
+        let html = "";
+        for (const it of r.items) { if (st.seen.has(it.url)) continue; st.seen.add(it.url); html += extCardHtml(it); n++; st.count++; }
+        feed.insertAdjacentHTML("beforeend", html);
+      })().catch(() => { if (ps.page === 0) st.failed.add(P.name); ps.done = true; }));
+    }
+    await Promise.all(jobs);
+    if (stale()) return n;
+    if ((!cur.groups.has("wiki") || st.wiki.done) && enabled.every(([id]) => st.ps[id]?.done)) st.done = true;
+    if (note) note.textContent = st.failed.size ? `${st.failed.size} source${st.failed.size > 1 ? "s" : ""} couldn’t be reached. The rest are shown.` : "";
+    return n;
+  }
+
+  async function more() {
+    if (st.busy || st.final || stale()) return;
+    st.busy = true; sent.textContent = "Loading more…";
+    let added = 0, tries = 0, failed = false;
+    try {
+      while (added < 8 && tries < 6 && st.count < MAX_CARDS && !st.final) {
+        if (st.done) { // this source is used up: continue with related articles if there are any
+          const nx = cur.then?.(st.first);
+          if (!nx) { st.final = true; break; }
+          cur = nx; st.done = false; st.offset = 0;
+          if (cur.heading) feed.insertAdjacentHTML("beforeend", `<h2 class="fhead">${esc(cur.heading)}</h2>`);
+        }
+        tries++;
+        if (cur.kind === "multi") { added += await multiRound(); if (stale()) return; continue; }
+        const pages = await fetchCards(cur, st);
+        if (stale()) return;
+        let html = "";
+        for (const pg of pages) {
+          if (st.seen.has(pg.pageid)) continue;
+          if (st.first == null) st.first = pg.title;
+          if (cur.pics !== false && !pg.thumbnail) continue;
+          st.seen.add(pg.pageid); html += cardHtml(pg); added++; st.count++;
+        }
+        feed.insertAdjacentHTML("beforeend", html);
+      }
+      if (st.count >= MAX_CARDS) st.final = true;
+      sent.textContent = st.final ? (st.count ? "That’s all for now. Use search to keep exploring." : (state.safe ? "No results. Safe Search is on; turn it off in Settings to include adult topics." : "No results found.")) : "";
+    } catch {
+      if (stale()) return;
+      failed = true;
+      sent.innerHTML = `<button class="iconbtn" id="feedRetry">Couldn’t load more. Tap to retry</button>`;
+    } finally {
+      if (!stale()) {
+        st.busy = false;
+        if (src.manual) { if (!st.final && !failed) sent.innerHTML = `<button class="iconbtn" id="feedMore">Show more</button>`; }
+        else if (!st.final && !failed && io) { io.unobserve(sent); io.observe(sent); }
+      }
+    }
+  }
+  sent.addEventListener("click", e => {
+    if (e.target.id === "feedMore") more();
+    if (e.target.id === "feedRetry") { io?.unobserve(sent); more().then(() => io?.observe(sent)); }
+  });
+  if (src.manual) more();
+  else { io = ctl.io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) more(); }, { rootMargin: "900px" }); io.observe(sent); }
+}
+function startRelated(shown, tok) {
+  if (tok !== renderTok) return;
+  const box = $("#feedbox");
+  if (box) startFeed(box, { kind: "more", title: shown });
+}
+function runSearchFeed(qs) {
+  startFeed($("#feedbox"), { kind: "multi", q: qs, groups: new Set(state.groups),
+    then: first => first ? { kind: "more", title: first, pics: true, heading: `Related to “${first}”` } : null });
+}
+function searchPage(qs) {
+  state.current = null; state.query = qs;
+  document.title = qs + " | Info Oasis";
+  if (isHardQuery(qs)) { app.innerHTML = UNAVAILABLE; return; }
+  app.innerHTML = `<h1 class="ptitle">Results for “${esc(qs)}”</h1>
+    <p class="lead">Articles plus government, research, book, and museum sources. Tap a card to read it (some open their original site), or tap ♡ to save it. Your search is sent only to the source groups switched on below.</p>
+    <div class="chips" id="groups" role="group" aria-label="Sources">${Object.entries(GROUPS).map(([k, v]) => `<button data-group="${k}" aria-pressed="${state.groups.has(k)}" class="${state.groups.has(k) ? "on" : ""}">${v}</button>`).join("")}</div>
+    <div id="feedbox"></div>`;
+  scrollTo(0, 0);
+  runSearchFeed(qs);
+}
+
+/* ---------- Pictures strip on articles ---------- */
+async function loadGallery(title, tok, chk) {
+  try {
+    const d = await j(`${api()}/api/rest_v1/page/media-list/${enc(underscore(title))}`);
+    if (tok !== renderTok) return;
+    const seen = new Set(), items = [];
+    for (const i of d.items || []) {
+      if (i.type !== "image" || !i.showInGallery || !i.srcset?.length || seen.has(i.title)) continue;
+      seen.add(i.title);
+      const sets = i.srcset;
+      items.push({ thumb: fix(sets[0].src), full: fix(sets[sets.length - 1].src), cap: (i.caption?.text || "").trim().slice(0, 300),
+        name: i.title.replace(/^[^:]+:/, "").replace(/_/g, " "), page: "https://commons.wikimedia.org/wiki/" + enc(i.title.replace(/ /g, "_")) });
+      if (items.length >= 16) break;
+    }
+    const box = $("#gallery");
+    const ok = items.filter(g => { const t = normTxt(g.name + " " + g.cap); return !(HARD_PAIR.test(t) || HARD_RE.test(t) || (chk.minor && NUDE_IMG.test(t)) || (state.safe && NUDE_IMG.test(t))); });
+    if (!box || !ok.length || (state.safe && chk.lvl === "nopic")) return;
+    galleryItems = ok;
+    box.innerHTML = `<section class="gallery"><h2>Pictures</h2><div class="gstrip">${galleryItems.map((g, n) =>
+      `<button data-gal="${n}" aria-label="${esc(g.cap || g.name)}"><img src="${esc(g.thumb)}" alt="${esc(g.cap || g.name)}" ${n > 3 ? 'loading="lazy"' : ""} decoding="async"></button>`).join("")}</div></section>`;
+  } catch {}
+}
+
+/* ---------- Home ---------- */
+async function home() {
+  const tok = renderTok;
+  state.current = null;
+  document.title = "Info Oasis";
+  const note = state.notice ? `<p class="notice">${esc(state.notice)}</p>` : "";
+  state.notice = "";
+  const topics = state.lang === "en" ? ["Science","History","Technology","Geography","Mathematics","Medicine","Art","Music","Literature","Philosophy","Economics","Space exploration","Animals","Architecture"] : [];
+  app.innerHTML = `<section class="hero"><h1>Look something up.</h1>
+    <p>Search articles, research, books, and museum collections in one private place. No accounts, no tracking, and no search history.</p></section>${note}
+    <div class="grid" id="hgrid"><div class="state">Loading today’s highlights…</div></div>
+    <section class="discover"><h2 class="serif">Discover</h2>
+      <p class="lead">Keep scrolling for more articles with pictures${topics.length ? ", or pick a topic" : ""}.</p>
+      ${topics.length ? `<div class="chips" id="topics"><button class="on" data-topic="">Surprise me</button>${topics.map(x => `<button data-topic="${esc(x)}">${esc(x)}</button>`).join("")}</div>` : ""}
+      <div id="feedbox"></div></section>`;
+  startFeed($("#feedbox"), { kind: "random" });
+  try {
+    let f = null;
+    for (const fp of [Date.now(), Date.now() - 864e5].map(t => new Date(t).toISOString().slice(0, 10).replace(/-/g, "/"))) {
+      const fk = state.lang + "/" + fp;
+      f = feedCache.get(fk);
+      if (!f) { try { f = await j(`${api()}/api/rest_v1/feed/featured/${fp}`); feedCache.set(fk, f); } catch {} }
+      if (f) break;
+    }
+    if (!f) throw new Error("no feed");
+    if (tok !== renderTok) return;
+    const im = f.image;
+    const tl = f.tfa ? classify({ title: f.tfa.titles.normalized, terms: { description: [f.tfa.description || ""] }, extract: f.tfa.extract }) : "hard";
+    const t = keep(tl) ? f.tfa : null, tPic = picOk(tl);
+    const lv = a => sf(a.titles?.normalized || a.article.replace(/_/g, " "), a.description);
+    const read = (f.mostread?.articles || []).filter(a => !/^(Main_Page|Special:|Wikipedia:|Spécial:|Especial:)/.test(a.article)).filter(a => keep(lv(a))).slice(0, 8);
+    const otd = (f.onthisday || []).filter(e => keep(classify({ title: "", terms: { description: [""] }, extract: e.text })) && (e.pages || []).every(pg => keep(sf(pg.titles?.normalized || "", pg.description)))).slice(0, 6);
+    const potdTxt = normTxt((im?.title || "") + " " + (im?.description?.text || ""));
+    potdItem = im?.thumbnail && !HARD_PAIR.test(potdTxt) && !(state.safe && NUDE_IMG.test(potdTxt)) ? [{ thumb: im.thumbnail.source, full: im.thumbnail.source, cap: im.description?.text || "", name: (im.title || "").replace(/^[^:]+:/, "").replace(/_/g, " "), page: "https://commons.wikimedia.org/wiki/" + enc((im.title || "").replace(/ /g, "_")) }] : [];
+    const thumb = src => src ? `<img class="lthumb" src="${esc(src)}" alt="" loading="lazy" decoding="async">` : `<span class="lthumb"></span>`;
+    $("#hgrid").innerHTML = `
+      ${t ? `<article class="panel feat"><h2>Featured article</h2>
+        ${t.thumbnail && tPic ? `<img src="${esc(t.thumbnail.source)}" alt="" decoding="async" fetchpriority="high">` : ""}
+        <h3>${esc(t.titles.normalized)}</h3><p>${esc(t.description || "")}</p>
+        <p style="color:var(--text)">${esc((t.extract || "").slice(0, 280))}…</p>
+        <a href="${artHash(state.lang, t.titles.canonical)}">Read the article</a></article>` : ""}
+      ${potdItem.length ? `<section class="panel"><h2>Picture of the day</h2>
+        <button class="potd" data-potd aria-label="Enlarge picture"><img src="${esc(potdItem[0].thumb)}" alt="${esc(potdItem[0].cap)}" decoding="async"></button>
+        <p class="cap">${esc(potdItem[0].cap.slice(0, 220))}</p></section>` : ""}
+      ${read.length ? `<section class="panel"><h2>Most read yesterday</h2><ul class="list">
+        ${read.map(a => `<li>${thumb(picOk(lv(a)) ? a.thumbnail?.source : null)}<div><a href="${artHash(state.lang, a.article)}">${esc(a.titles?.normalized || a.article.replace(/_/g, " "))}</a><br><small>${esc(a.description || "")}</small></div></li>`).join("")}</ul></section>` : ""}
+      ${otd.length ? `<section class="panel"><h2>On this day</h2><ul class="list">
+        ${otd.map(e => { const pg = (e.pages || []).find(x => x.thumbnail) || (e.pages || [])[0];
+          return `<li>${thumb(pg && picOk(sf(pg.titles?.normalized || "", pg.description)) ? pg.thumbnail?.source : null)}<div><span class="yr">${esc(e.year)}</span>${esc(e.text)}${pg ? ` <a href="${artHash(state.lang, pg.titles.canonical)}">Read more</a>` : ""}</div></li>`; }).join("")}</ul></section>` : ""}`;
+  } catch {
+    if (tok === renderTok) $("#hgrid")?.remove();
+  }
+}
+
+/* ---------- Article ---------- */
+const articleCache = new Map(); // memory only, cleared on reload
+let artCtl = null, renderTok = 0, flushNow = null;
+async function fetchArticle(title) {
+  const key = state.lang + ":" + underscore(title);
+  if (articleCache.has(key)) { const v = articleCache.get(key); articleCache.delete(key); articleCache.set(key, v); return v; }
+  artCtl?.abort(); artCtl = new AbortController();
+  const r = await fetch(`${api()}/api/rest_v1/page/html/${enc(title)}`, { ...opts, signal: artCtl.signal });
+  if (r.status === 404) throw new Error("404");
+  if (!r.ok) throw new Error("net");
+  const txt = await r.text();
+  articleCache.set(key, txt);
+  if (articleCache.size > 6) articleCache.delete(articleCache.keys().next().value);
+  return txt;
+}
+const SKELETON = `<div class="sk" role="status" aria-label="Loading"><i></i><i></i><i></i><i style="width:85%"></i><i></i><i style="width:70%"></i></div>`;
+async function article(title) {
+  const tok = renderTok;
+  state.current = title;
+  app.innerHTML = SKELETON;
+  scrollTo(0, 0);
+  try {
+    const [txt, chk] = await Promise.all([fetchArticle(title), checkTitle(title)]);
+    if (tok !== renderTok) return;
+    const lvl = chk.lvl;
+    if (lvl === "hard") { document.title = "Not available | Info Oasis"; app.innerHTML = UNAVAILABLE; return; }
+    if (lvl === "block" && state.safe) {
+      document.title = "Hidden | Info Oasis";
+      app.innerHTML = `<div class="state"><h2>Hidden by Safe Search</h2><p>This article covers adult topics. To view it, turn off Safe Search in Settings.</p><button class="btn" id="unlock">Turn off Safe Search</button></div>`;
+      return;
+    }
+    const doc = new DOMParser().parseFromString(txt, "text/html");
+    const shown = doc.title || title.replace(/_/g, " ");
+    document.title = shown + " | Info Oasis";
+    const body = doc.body;
+    body.querySelectorAll("style,link,meta,script,.mw-editsection,.navbox,.ambox,.metadata,.sistersitebox,.noprint,.mw-empty-elt").forEach(n => n.remove());
+    body.querySelectorAll("a.new").forEach(a => a.replaceWith(...a.childNodes));
+    body.querySelectorAll("[src],[srcset],[poster]").forEach(n => {
+      for (const at of ["src", "poster"]) if (n.hasAttribute(at)) n.setAttribute(at, fix(n.getAttribute(at)));
+      if (n.hasAttribute("srcset")) n.setAttribute("srcset", n.getAttribute("srcset").replace(/(^|,\s*)\/\//g, "$1https://"));
+      if (n.tagName === "VIDEO" || n.tagName === "AUDIO") n.preload = "none";
+    });
+    filterImages(body, lvl, chk.minor);
+    body.querySelectorAll("img").forEach((im, i) => {
+      im.decoding = "async";
+      if (i < 2) { im.loading = "eager"; if (i === 0) im.setAttribute("fetchpriority", "high"); } else im.loading = "lazy";
+    });
+    body.querySelectorAll("a[href]").forEach(a => {
+      const h = a.getAttribute("href");
+      if (/^https?:/.test(h) || h.startsWith("//")) { if (h.startsWith("//")) a.href = "https:" + h; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+    });
+    const heads = [...body.querySelectorAll("h2[id],h3[id]")];
+    const toc = heads.map(h => `<li class="${h.tagName === "H3" ? "sub" : ""}"><a href="#${h.id}" data-jump="${esc(h.id)}">${esc(h.textContent)}</a></li>`).join("");
+    const e = enc(underscore(title)), pl = enc(shown);
+    const dir = doc.documentElement.getAttribute("dir") || "ltr";
+    state.cite = `“${shown}.” Wikipedia. ${api()}/wiki/${e}. Accessed ${new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })}. Text under CC BY-SA 4.0.`;
+    app.innerHTML = `<div class="layout">
+      <details class="toc" open><summary>Contents</summary><ol>${toc}</ol></details>
+      <article class="article">
+        <h1 class="title">${esc(shown)}</h1>
+        <div class="meta"><button class="btn" id="saveBtn"></button></div>
+        <div id="gallery"></div>
+        <div class="body" dir="${esc(dir)}"></div>
+        <aside class="attrib"><strong>Sources and further reading</strong><br>
+          Article text is from Wikipedia under CC BY-SA 4.0. Check the references above and cross-check important facts. Clicking a link below sends the title to that site.
+          <div class="also">
+            <a href="${api()}/wiki/${e}" ${ext}>View on Wikipedia</a>
+            <a href="${api()}/wiki/${e}?action=history" ${ext}>Edit history</a>
+            <a href="https://www.britannica.com/search?query=${pl}" ${ext}>Britannica</a>
+            <a href="https://scholar.google.com/scholar?q=${pl}" ${ext}>Google Scholar</a>
+            <a href="https://www.wikidata.org/w/index.php?search=${pl}" ${ext}>Wikidata</a>
+            <a href="https://commons.wikimedia.org/w/index.php?search=${pl}" ${ext}>Wikimedia Commons</a>
+            <a href="https://archive.org/search?query=${pl}" ${ext}>Internet Archive</a>
+            <a href="#/sources">More reputable sources</a>
+          </div>
+          <p style="margin-top:.8rem"><button class="iconbtn small" id="copyCite">Copy citation</button></p></aside>
+        <section class="more"><h2 class="serif">More from trusted sources</h2><p class="lead">Government, research, book, and museum sources on this topic.</p>
+          <div id="extbox"><div id="loadExtWrap"><button class="btn" id="loadExt">Search trusted sources</button>
+          <small>Sends this title to the sources listed on the Sources page. Nothing is sent unless you tap.</small></div></div></section>
+        <section class="more"><h2 class="serif">Keep exploring</h2><p class="lead">More articles like this one, with pictures. Keep scrolling.</p><div id="feedbox"></div></section>
+      </article></div>`;
+    // Show the top of the article immediately, then add the rest in small batches so the page stays responsive.
+    const bodyEl = $(".body");
+    const kids = [...body.children];
+    bodyEl.append(...kids.slice(0, 3));
+    let rest = kids.slice(3);
+    let finished = false;
+    const finish = () => { if (finished || tok !== renderTok) return; finished = true; startRelated(shown, tok); };
+    const step = () => {
+      if (tok !== renderTok) return;
+      if (rest.length) bodyEl.append(...rest.splice(0, 4));
+      if (rest.length) requestAnimationFrame(step); else finish();
+    };
+    flushNow = () => { if (rest.length) { bodyEl.append(...rest); rest = []; } finish(); };
+    requestAnimationFrame(step);
+    if (innerWidth < 960) $(".toc").open = false;
+    state.shown = shown;
+    refreshSaveBtn();
+    loadGallery(title, tok, chk);
+  } catch (err) {
+    if (err.name === "AbortError" || tok !== renderTok) return;
+    document.title = "Not found | Info Oasis";
+    app.innerHTML = err.message === "404"
+      ? `<div class="state"><h2>No article found for “${esc(title.replace(/_/g, " "))}”</h2><p>Check the spelling or try the search bar.</p></div>`
+      : `<div class="state"><h2>Couldn’t load this article</h2><p>Check your connection and try again.</p></div>`;
+  }
+}
+
+/* Images: retry once at the standard size, then show a placeholder with the alt text */
+document.addEventListener("error", e => {
+  const im = e.target;
+  if (!(im instanceof HTMLImageElement)) return;
+  if (im.closest(".results")) { im.style.visibility = "hidden"; return; }
+  if (!im.dataset.retry) {
+    im.dataset.retry = "1";
+    const src = im.getAttribute("src");
+    im.removeAttribute("srcset");
+    im.loading = "eager";
+    setTimeout(() => { im.src = src; }, 900);
+  } else im.classList.add("broken");
+}, true);
+
+/* ---------- Library (in memory only; export to keep) ---------- */
+const keyFor = (lang, id) => lang + ":" + underscore(id);
+function findSaved(key) {
+  for (const f of state.lib.folders) for (const it of f.items) if (it.key === key) return f;
+  return null;
+}
+function refreshSaveBtn() {
+  const b = $("#saveBtn"); if (!b) return;
+  const f = findSaved(keyFor(state.lang, state.current || ""));
+  b.textContent = f ? `♥ Saved in ${f.name}` : "♡ Save";
+}
+function refreshHearts() {
+  document.querySelectorAll(".heart").forEach(h => {
+    const on = !!findSaved(keyFor(h.dataset.lang, h.dataset.id));
+    h.classList.toggle("on", on); h.textContent = on ? "♥" : "♡";
+    h.setAttribute("aria-label", on ? "Saved. Tap to change folder" : "Save to a folder");
+  });
+}
+const dlg = $("#saveDlg");
+let saveTarget = null;
+function dlgToggleNew() { $("#dlgNewWrap").hidden = $("#dlgFolder").value !== "__new"; }
+$("#dlgFolder").addEventListener("change", dlgToggleNew);
+function openSave(t) {
+  saveTarget = t;
+  const key = keyFor(t.lang, t.id), F = state.lib.folders, cur = findSaved(key);
+  $("#dlgTitle").textContent = t.title;
+  $("#dlgFolder").innerHTML = F.map(f => `<option value="${f.id}"${cur && cur.id === f.id ? " selected" : ""}>${esc(f.name)}</option>`).join("") + `<option value="__new"${F.length ? "" : " selected"}>+ New folder…</option>`;
+  $("#dlgNew").value = "";
+  $("#dlgNote").value = cur?.items.find(i => i.key === key)?.note || "";
+  dlgToggleNew();
+  dlg.showModal();
+}
+$("#dlgCancel").onclick = () => dlg.close();
+$("#dlgSave").onclick = () => {
+  if (!saveTarget) return;
+  let fid = $("#dlgFolder").value, folder;
+  if (fid === "__new") {
+    const name = $("#dlgNew").value.trim().slice(0, 60);
+    if (!name) { $("#dlgNew").focus(); return; }
+    folder = { id: "f" + (++state.uid), name, note: "", items: [] };
+    state.lib.folders.push(folder);
+  } else folder = state.lib.folders.find(f => f.id === fid);
+  const key = keyFor(saveTarget.lang, saveTarget.id);
+  state.lib.folders.forEach(f => f.items = f.items.filter(i => i.key !== key));
+  folder.items.push({ key, lang: saveTarget.lang, id: underscore(saveTarget.id), title: saveTarget.title, note: $("#dlgNote").value.slice(0, 2000), url: saveTarget.url || "", source: saveTarget.source || "" });
+  state.dirty = true;
+  dlg.close();
+  refreshSaveBtn(); refreshHearts();
+};
+
+function libraryPage() {
+  state.current = null;
+  document.title = "Library | Info Oasis";
+  const F = state.lib.folders;
+  const folderHtml = f => `<section class="panel fold" data-f="${f.id}">
+    <header><h2>${esc(f.name)}</h2><button class="iconbtn small" data-act="delFolder">Delete folder</button></header>
+    <textarea class="fnote" placeholder="Notes and thoughts for this folder" maxlength="5000">${esc(f.note)}</textarea>
+    ${f.items.length ? `<ul class="items">${f.items.map(it => `<li data-k="${esc(it.key)}">
+      <div class="top">${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">` : `<a href="${artHash(it.lang, it.id)}">`}${esc(it.title)}</a><span class="badge">${esc(it.source || (it.lang === "ext" ? "Source" : "Article"))}</span>
+        ${F.length > 1 ? `<select data-act="move" aria-label="Move to folder">${F.map(g => `<option value="${g.id}"${g.id === f.id ? " selected" : ""}>${esc(g.name)}</option>`).join("")}</select>` : ""}
+        <button class="iconbtn small" data-act="remove">Remove</button></div>
+      <textarea class="inote" placeholder="Notes on this article" maxlength="2000">${esc(it.note)}</textarea></li>`).join("")}</ul>`
+      : `<p style="color:var(--muted);margin-top:.6rem">No articles yet. Open an article and press Save.</p>`}
+  </section>`;
+  app.innerHTML = `<h1 class="ptitle">Library</h1>
+    <p class="lead">Organize articles into folders and add your own notes. Your library lives only in this browser tab and is never uploaded or stored. <strong>Export it to a file to keep it</strong>, and import that file next time.</p>
+    <div class="toolbar">
+      <input type="text" id="newFolder" placeholder="New folder name" maxlength="60" aria-label="New folder name">
+      <button class="btn" data-act="addFolder">Create folder</button>
+      <button class="iconbtn" data-act="export">Export file</button>
+      ${F.length ? `<button class="iconbtn" data-act="exportMd">Export notes (.md)</button>` : ""}
+      <label class="iconbtn" tabindex="0">Import file<input type="file" id="imp" accept=".json,application/json" hidden></label>
+      ${F.length ? `<button class="iconbtn" data-act="clear">Clear all</button>` : ""}
+    </div>${F.length ? F.map(folderHtml).join("") : `<div class="state">Nothing here yet. Create a folder, or press Save at the top of any article.</div>`}`;
+}
+app.addEventListener("input", e => {
+  const sec = e.target.closest("[data-f]"); if (!sec) return;
+  const f = state.lib.folders.find(x => x.id === sec.dataset.f); if (!f) return;
+  if (e.target.classList.contains("fnote")) f.note = e.target.value;
+  if (e.target.classList.contains("inote")) { const it = f.items.find(i => i.key === e.target.closest("li").dataset.k); if (it) it.note = e.target.value; }
+  state.dirty = true;
+});
+function libAction(el) {
+  const act = el.dataset.act, sec = el.closest("[data-f]");
+  const f = sec && state.lib.folders.find(x => x.id === sec.dataset.f);
+  if (act === "addFolder") {
+    const n = $("#newFolder").value.trim().slice(0, 60); if (!n) { $("#newFolder").focus(); return; }
+    state.lib.folders.push({ id: "f" + (++state.uid), name: n, note: "", items: [] }); state.dirty = true; libraryPage();
+  } else if (act === "delFolder" && f && confirm(`Delete “${f.name}” and its saved articles?`)) {
+    state.lib.folders = state.lib.folders.filter(x => x !== f); state.dirty = true; libraryPage();
+  } else if (act === "remove" && f) {
+    const k = el.closest("li").dataset.k; f.items = f.items.filter(i => i.key !== k); state.dirty = true; libraryPage();
+  } else if (act === "move" && f) {
+    const k = el.closest("li").dataset.k, it = f.items.find(i => i.key === k), to = state.lib.folders.find(x => x.id === el.value);
+    if (it && to) { f.items = f.items.filter(i => i !== it); to.items.push(it); state.dirty = true; libraryPage(); }
+  } else if (act === "clear" && confirm("Remove every folder and saved article? Export first if you want a copy.")) {
+    state.lib.folders = []; state.dirty = true; libraryPage();
+  } else if (act === "export") {
+    download("info-oasis-library.json", JSON.stringify({ app: "Info Oasis", version: 1, folders: state.lib.folders }, null, 2), "application/json");
+    state.dirty = false;
+  } else if (act === "exportMd") {
+    const md = ["# Research notes", ""];
+    for (const fo of state.lib.folders) {
+      md.push(`## ${fo.name}`, "");
+      if (fo.note) md.push(fo.note, "");
+      for (const it of fo.items) md.push(`- [${it.title}](${it.url || `https://${it.lang}.wikipedia.org/wiki/${enc(it.id)}`})${it.note ? " — " + it.note.replace(/\s*\n+\s*/g, " ") : ""}`);
+      md.push("");
+    }
+    download("research-notes.md", md.join("\n"), "text/markdown");
+  }
+}
+app.addEventListener("change", e => {
+  if (e.target.id === "imp") {
+    const file = e.target.files[0]; if (!file) return;
+    const rd = new FileReader();
+    rd.onload = () => {
+      try {
+        const d = JSON.parse(rd.result);
+        if (!Array.isArray(d.folders)) throw 0;
+        d.folders.slice(0, 200).forEach(f => {
+          state.lib.folders.push({ id: "f" + (++state.uid), name: String(f.name || "Folder").slice(0, 60), note: String(f.note || "").slice(0, 5000),
+            items: (Array.isArray(f.items) ? f.items : []).slice(0, 500).map(i => ({
+              lang: (i.lang === "ext" || LANGS.some(l => l[0] === i.lang)) ? i.lang : "en", id: String(i.id || "").slice(0, 300), title: String(i.title || i.id || "").slice(0, 300),
+              key: String(((i.lang === "ext" || LANGS.some(l => l[0] === i.lang)) ? i.lang : "en") + ":" + String(i.id || "").slice(0, 300)), note: String(i.note || "").slice(0, 2000), url: /^https:\/\//.test(i.url) ? String(i.url).slice(0, 600) : "", source: String(i.source || "").slice(0, 60) })).filter(i => i.id && (i.lang !== "ext" || i.url)) });
+        });
+        state.dirty = true; libraryPage();
+      } catch { alert("That file isn’t a valid Info Oasis library."); }
+    };
+    rd.readAsText(file);
+  } else if (e.target.dataset.act === "move") libAction(e.target);
+});
+addEventListener("beforeunload", e => { if (state.dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+/* ---------- Info pages ---------- */
+const PAGES = {
+  about: ["About Info Oasis", `
+    <p>Info Oasis is a private research browser. Search once, then read articles, studies, books, datasets, and museum collections without accounts, ads, or a search history.</p>
+    <h2>What you can do</h2>
+    <ul><li>Search and read in 18 languages, with a picture strip on every article.</li>
+    <li>Keep scrolling for related reading with pictures.</li>
+    <li>Save items to folders in a Library, add your own notes, and export them as a file.</li>
+    <li>Pick a theme and text size, and lock the app with a PIN.</li></ul>
+    <h2>Safe Search</h2>
+    <p>Safe Search is on by default and hides adult topics and nudity. You can turn it off in Settings (18+) for your current visit, and it switches back on whenever you reload.</p>
+    <h2>Illegal content</h2>
+    <p>Info Oasis only loads images from the media servers of the sources it searches. On top of that, a filter that can’t be turned off, even with 18+ on, hides anything pointing to the sexual exploitation of minors, including search terms, articles, and images. No automatic filter is perfect. ${REPORT}</p>
+    <h2>Accuracy</h2>
+    <p>Open reference sites can contain mistakes. For anything important, check the references and the <a href="#/sources">Sources page</a>.</p>`],
+  privacy: ["Privacy", `
+    <p>Info Oasis is built to keep as little as possible. Here is exactly what happens.</p>
+    <h2>What it stores on your phone</h2>
+    <ul><li>Your PIN, scrambled so it can’t be read back.</li>
+    <li>Your settings: theme, text size, language, and auto-lock time.</li>
+    <li>Nothing else. No history, no searches, no cookies, no accounts, no analytics, and no ads.</li></ul>
+    <p>Your Library, your Safe Search choice, and recently opened pages live in memory only and disappear when you close or reload the app. Export a file to keep a Library.</p>
+    <h2>What leaves your phone</h2>
+    <ul><li>Searches and articles come from the sources on the <a href="#/sources">Sources page</a>. Each one sees your IP address and what you asked for, under its own privacy policy. Other source groups are searched only when you run a search, or when you tap “Search trusted sources” on an article.</li>
+    <li>Whoever hosts this page can see that it was loaded.</li>
+    <li>If you tap a link to another site, that site sees your visit.</li>
+    <li>No third-party fonts or scripts are used, and a security policy in the page blocks connections to anywhere else.</li></ul>
+    <h2>The PIN</h2>
+    <p>The PIN keeps people who pick up your phone out of the app. It locks this page; it doesn’t encrypt your device. If you forget it, you can erase the PIN and settings, which also clears the current session.</p>
+    <h2>Want more privacy?</h2>
+    <p>Install it to your home screen so it opens in its own window without browser history. A VPN or the Tor Browser also hides your IP address from the sources.</p>`],
+  sources: ["Sources", `
+    <p>Info Oasis searches these sources for you, and you can switch each group on or off on the results page. Results open on the original site.</p>
+    <h2>Searched directly by Info Oasis</h2>
+    <ul><li><a href="https://www.wikipedia.org" ${ext}>Wikipedia</a>: encyclopedia articles in 18 languages.</li>
+    ${Object.values(PROVIDERS).map(x => `<li><a href="${x.site}" ${ext}>${x.name}</a>: ${x.about}.</li>`).join("")}</ul>
+    <p>If a source is down or blocks requests from browsers, the results page says some sources couldn’t be reached and shows the rest.</p>
+    <h2>Credits and licenses</h2>
+    <p>Encyclopedia text is available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" ${ext}>CC BY-SA 4.0</a>. Pictures come from Wikimedia projects and carry their own licenses; open a picture’s “Source and license” link to see them. Info Oasis isn’t affiliated with the Wikimedia Foundation or any source listed here.</p>
+    <h2>More places to check</h2>
+    <ul><li><a href="https://www.britannica.com" ${ext}>Encyclopaedia Britannica</a>: edited articles by named experts.</li>
+    <li><a href="https://archive.org" ${ext}>Internet Archive</a>: books, web archives, and older versions of pages.</li>
+    <li><a href="https://scholar.google.com" ${ext}>Google Scholar</a>: academic papers and citations.</li>
+    <li><a href="https://ourworldindata.org" ${ext}>Our World in Data</a>: charts and sources on global trends.</li>
+    <li><a href="https://data.worldbank.org" ${ext}>World Bank Open Data</a>: economic and development statistics.</li>
+    <li><a href="https://www.who.int" ${ext}>World Health Organization</a>: primary health information.</li></ul>
+    <h2>Checking a claim</h2>
+    <ul><li>Open the references at the bottom of an article and read the original source.</li>
+    <li>Prefer primary sources, peer-reviewed work, and official data over summaries.</li>
+    <li>Check the date. Facts about people, laws, and science change.</li>
+    <li>Look for the same claim from at least two independent sources.</li></ul>`]
+};
+function infoPage(k) {
+  state.current = null;
+  const [t, h] = PAGES[k];
+  document.title = t + " | Info Oasis";
+  app.innerHTML = `<article class="page"><h1>${esc(t)}</h1>${h}</article>`;
+  scrollTo(0, 0);
+}
+
+/* ---------- Link handling inside articles ---------- */
+app.addEventListener("click", e => {
+  if (e.target.id === "unlock") { ageDlg.showModal(); return; }
+  if (e.target.id === "copyCite") {
+    (navigator.clipboard?.writeText(state.cite) || Promise.reject()).then(() => toast("Citation copied."), () => toast("Couldn’t copy. Select and copy it manually."));
+    return;
+  }
+  if (e.target.id === "loadExt") {
+    startFeed($("#extbox"), { kind: "multi", q: state.shown || state.current, groups: new Set(["gov", "sci", "books", "art"]), manual: true });
+    return;
+  }
+  const gp = e.target.closest("[data-group]");
+  if (gp) {
+    const k = gp.dataset.group;
+    if (state.groups.has(k) && state.groups.size === 1) return;
+    state.groups.has(k) ? state.groups.delete(k) : state.groups.add(k);
+    document.querySelectorAll("#groups button").forEach(b => { const on = state.groups.has(b.dataset.group); b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on)); });
+    runSearchFeed(state.query);
+    return;
+  }
+  const hb = e.target.closest("[data-save]");
+  if (hb) { e.preventDefault(); openSave({ lang: hb.dataset.lang, id: hb.dataset.id, title: hb.dataset.title, url: hb.dataset.url, source: hb.dataset.source }); return; }
+  const gl = e.target.closest("[data-gal]");
+  if (gl) { openLb(galleryItems, +gl.dataset.gal); return; }
+  if (e.target.closest("[data-potd]") && potdItem.length) { openLb(potdItem, 0); return; }
+  const tp = e.target.closest("[data-topic]");
+  if (tp) {
+    document.querySelectorAll("#topics button").forEach(b => b.classList.toggle("on", b === tp));
+    startFeed($("#feedbox"), tp.dataset.topic ? { kind: "more", title: tp.dataset.topic } : { kind: "random" });
+    return;
+  }
+  const act = e.target.closest("[data-act]");
+  if (act && act.dataset.act !== "move") { libAction(act); return; }
+  if (e.target.id === "saveBtn") { openSave({ lang: state.lang, id: underscore(state.current || ""), title: state.shown || state.current }); return; }
+  const jump = e.target.closest("[data-jump]");
+  if (jump) { e.preventDefault(); flushNow?.(); document.getElementById(jump.dataset.jump)?.scrollIntoView(); return; }
+  const a = e.target.closest(".body a[href]");
+  if (!a) return;
+  const h = a.getAttribute("href");
+  if (h.startsWith("#")) { e.preventDefault(); flushNow?.(); document.getElementById(decodeURIComponent(h.slice(1)))?.scrollIntoView(); }
+  else if (h.startsWith("./")) {
+    e.preventDefault();
+    const [t, frag] = h.slice(2).split("#");
+    const dt = decodeURIComponent(t);
+    if (/^[^\s:]+:/.test(dt)) { window.open(`${api()}/wiki/${t}`, "_blank", "noopener,noreferrer"); return; }
+    if (underscore(dt) === underscore(state.current || "") && frag) { flushNow?.(); document.getElementById(decodeURIComponent(frag))?.scrollIntoView(); }
+    else location.hash = artHash(state.lang, dt);
+  }
+});
+
+/* ---------- Router ---------- */
+function route() {
+  if (isLocked()) { pendingRoute = true; return; }
+  renderTok++; flushNow = null; artCtl?.abort(); activeFeeds.forEach(f => f.stop());
+  const segs = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean).map(decodeURIComponent);
+  if (segs[0] === "a" && segs[1] && segs[2]) {
+    if (LANGS.some(l => l[0] === segs[1])) state.lang = segs[1];
+    langSel.value = state.lang;
+    article(segs.slice(2).join("/"));
+    return;
+  }
+  if (segs[0] === "s" && segs[1] && segs[2]) {
+    if (LANGS.some(l => l[0] === segs[1])) state.lang = segs[1];
+    langSel.value = state.lang;
+    searchPage(segs.slice(2).join("/"));
+    return;
+  }
+  langSel.value = state.lang;
+  if (segs[0] === "library") libraryPage();
+  else if (segs[0] === "settings") settingsPage();
+  else if (PAGES[segs[0]]) infoPage(segs[0]);
+  else home();
+}
+addEventListener("hashchange", route);
+
+/* ---------- Toast and file helper ---------- */
+const toastEl = $("#toast"); let toastT;
+function toast(msg) { toastEl.textContent = msg; toastEl.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove("show"), 2400); }
+function download(name, text, type) {
+  const url = URL.createObjectURL(new Blob([text], { type }));
+  const a = document.createElement("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+addEventListener("offline", () => toast("You’re offline. Some things won’t load."));
+addEventListener("online", () => toast("Back online."));
+
+/* ---------- PIN lock ---------- */
+const REG_PIN = /^\d{4,8}$/;
+const hex = buf => [...new Uint8Array(buf)].map(x => x.toString(16).padStart(2, "0")).join("");
+async function hashPin(pin, salt, iter, alg) {
+  if (alg === "p") {
+    if (!crypto.subtle) return "";
+    const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(pin), "PBKDF2", false, ["deriveBits"]);
+    return hex(await crypto.subtle.deriveBits({ name: "PBKDF2", hash: "SHA-256", salt: Uint8Array.from(salt.match(/../g).map(h => parseInt(h, 16))), iterations: iter }, key, 256));
+  }
+  // Fallback for pages not served over https (for example a local file): weaker, but still not stored in plain text.
+  let a = 0xdeadbeef, b = 0x41c6ce57; const str = salt + ":" + pin;
+  for (let r = 0; r < 30000; r++) for (let i = 0; i < str.length; i++) { const c = str.charCodeAt(i); a = Math.imul(a ^ c, 2654435761); b = Math.imul(b ^ c, 1597334677); a ^= b >>> 15; }
+  return (a >>> 0).toString(16) + (b >>> 0).toString(16);
+}
+async function savePin(pin) {
+  const rec = { s: hex(crypto.getRandomValues(new Uint8Array(16))), i: 120000, n: pin.length, a: crypto.subtle ? "p" : "w" };
+  rec.h = await hashPin(pin, rec.s, rec.i, rec.a);
+  store.set("pin", rec);
+}
+async function checkPin(pin) {
+  const rec = store.get("pin");
+  return !!rec && (await hashPin(pin, rec.s, rec.i, rec.a)) === rec.h;
+}
+function throttleLeft() { const t = store.get("throttle"); return t?.until > Date.now() ? Math.ceil((t.until - Date.now()) / 1000) : 0; }
+function failedAttempt() {
+  const t = store.get("throttle") || { fails: 0 };
+  t.fails++;
+  if (t.fails % 5 === 0) t.until = Date.now() + Math.min(15 * 60000, 30000 * 2 ** (t.fails / 5 - 1));
+  store.set("throttle", t);
+}
+
+const lockEl = $("#lock"), pinEl = $("#pin"), pin2El = $("#pin2"), lockErr = $("#lockErr"), lockBtn = $("#lockBtn");
+let started = false, pendingRoute = false, savedTitle = "", waitTimer = null, lastActive = Date.now(), hiddenAt = 0;
+const isLocked = () => !lockEl.hidden;
+function setShellInert(on) {
+  [...document.body.children].forEach(n => { if (n !== lockEl && n.id !== "cover" && n.tagName !== "SCRIPT") on ? n.setAttribute("inert", "") : n.removeAttribute("inert"); });
+}
+function tickWait() {
+  clearInterval(waitTimer);
+  const upd = () => {
+    const w = throttleLeft(); lockBtn.disabled = w > 0;
+    if (w > 0) lockErr.textContent = `Too many tries. Wait ${w} seconds.`;
+    else { clearInterval(waitTimer); if (lockErr.textContent.startsWith("Too many")) lockErr.textContent = ""; }
+  };
+  upd();
+  if (throttleLeft() > 0) waitTimer = setInterval(upd, 1000);
+}
+function showLock() {
+  if (!isLocked()) savedTitle = document.title;
+  document.title = "Info Oasis";
+  document.querySelectorAll("dialog[open]").forEach(d => d.close());
+  box.classList.remove("open"); $("#pop").classList.remove("open"); q.value = "";
+  document.body.classList.add("locked"); lockEl.hidden = false; setShellInert(true);
+  const rec = store.get("pin");
+  lockEl.dataset.mode = rec ? "unlock" : "setup";
+  $("#lockTitle").textContent = rec ? "Enter your PIN" : "Create a PIN";
+  $("#lockMsg").textContent = rec ? "Info Oasis is locked." : "Choose 4 to 8 digits. You’ll enter it every time you open Info Oasis. It stays on this phone." + (store.ok ? "" : " Your browser blocks storage, so you’ll need to create a new PIN each visit.");
+  pin2El.hidden = !!rec; $("#lockForgot").hidden = !rec;
+  lockBtn.textContent = rec ? "Unlock" : "Create PIN";
+  pinEl.value = ""; pin2El.value = ""; lockErr.textContent = "";
+  setTimeout(() => pinEl.focus(), 60);
+  tickWait();
+}
+function hideLock() {
+  lockEl.hidden = true; document.body.classList.remove("locked"); setShellInert(false);
+  if (savedTitle) document.title = savedTitle;
+  lastActive = Date.now();
+  if (!started) { started = true; pendingRoute = false; route(); }
+  else if (pendingRoute) { pendingRoute = false; route(); }
+}
+let lockBusy = false;
+async function submitLock() {
+  if (lockBusy) return;
+  const mode = lockEl.dataset.mode, pin = pinEl.value;
+  lockErr.textContent = "";
+  if (mode === "setup") {
+    if (!REG_PIN.test(pin)) { lockErr.textContent = "Use 4 to 8 digits."; return; }
+    if (!pin2El.value) { pin2El.focus(); return; }
+    if (pin !== pin2El.value) { lockErr.textContent = "The PINs don’t match."; return; }
+    lockBusy = true; await savePin(pin); lockBusy = false;
+    hideLock(); toast("PIN created.");
+    return;
+  }
+  if (throttleLeft()) { tickWait(); return; }
+  lockBusy = true; lockBtn.disabled = true;
+  const ok = await checkPin(pin);
+  lockBusy = false; lockBtn.disabled = false;
+  if (ok) { store.del("throttle"); hideLock(); return; }
+  failedAttempt(); pinEl.value = ""; pinEl.focus();
+  lockErr.textContent = "Wrong PIN.";
+  tickWait();
+}
+pinEl.addEventListener("input", () => {
+  pinEl.value = pinEl.value.replace(/\D/g, "");
+  const rec = store.get("pin");
+  if (lockEl.dataset.mode === "unlock" && rec && pinEl.value.length === rec.n) submitLock();
+});
+pin2El.addEventListener("input", () => { pin2El.value = pin2El.value.replace(/\D/g, ""); });
+[pinEl, pin2El].forEach(el => el.addEventListener("keydown", e => { if (e.key === "Enter") submitLock(); }));
+lockBtn.onclick = submitLock;
+function eraseAll() { ["pin", "settings", "throttle"].forEach(k => store.del(k)); state.dirty = false; location.reload(); }
+$("#lockForgot").onclick = () => { if (confirm("Forgot your PIN? You can reset it, but that erases your PIN and settings and clears this session, including any unexported Library. Nothing else is stored.")) eraseAll(); };
+$("#lockNow").onclick = showLock;
+
+// Lock when you leave the app, after the chosen time away, or after being idle. While hidden, the screen is covered so app switchers don't show your pages.
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    hiddenAt = Date.now(); document.body.classList.add("covered");
+    if (!isLocked() && settings.lock === 0) showLock();
+  } else {
+    document.body.classList.remove("covered");
+    if (!isLocked() && settings.lock > 0 && Date.now() - hiddenAt > settings.lock * 60000) showLock();
+  }
+});
+["pointerdown", "keydown", "touchstart", "scroll"].forEach(ev => addEventListener(ev, () => { lastActive = Date.now(); }, { passive: true, capture: true }));
+setInterval(() => { if (!isLocked() && settings.lock > 0 && Date.now() - lastActive > settings.lock * 60000) showLock(); }, 5000);
+
+function clearSession() {
+  state.lib.folders = []; state.dirty = false;
+  articleCache.clear(); searchCache.clear(); feedCache.clear(); checkCache.clear(); metIds.clear();
+  activeFeeds.forEach(f => f.stop());
+  app.innerHTML = ""; state.current = null; state.query = "";
+  history.replaceState(null, "", location.pathname + "#/");
+  pendingRoute = true; showLock();
+}
+
+/* ---------- Settings page ---------- */
+function settingsPage() {
+  state.current = null;
+  document.title = "Settings | Info Oasis";
+  const opt = (v, t) => `<option value="${v}"${settings.lock === v ? " selected" : ""}>${t}</option>`;
+  const themes = [["auto", "Auto"], ["light", "Light"], ["sand", "Sand"], ["sky", "Sky"], ["mint", "Mint"], ["dark", "Dark"]];
+  app.innerHTML = `<article class="page"><h1>Settings</h1>
+    <p class="lead">Everything you can change in Info Oasis. Your choices are remembered on this phone.</p>
+    <h2>Appearance</h2>
+    <div class="setrow"><label>Text size</label><button class="iconbtn" id="sFsDown" aria-label="Smaller text">A−</button><span id="sFsVal" aria-live="polite">${Math.round(state.fs / 1.08 * 100)}%</span><button class="iconbtn" id="sFsUp" aria-label="Larger text">A+</button></div>
+    <div class="setrow"><label>Theme</label>${themes.map(([v, t]) => `<button class="iconbtn${state.theme === v ? " on" : ""}" data-sset="${v}">${t}</button>`).join("")}</div>
+    <div class="setrow"><label for="sLang">Language</label><select id="sLang">${LANGS.map(([c, n]) => `<option value="${c}"${state.lang === c ? " selected" : ""}>${esc(n)}</option>`).join("")}</select></div>
+    <h2>Safe Search</h2>
+    <p>Safe Search is ${state.safe ? "on" : "off (18+)"}. It hides adult topics and nudity, and switches back on every time you open the app. Anything involving minors stays blocked either way.</p>
+    <div class="setrow"><button class="iconbtn" id="sSafe">${state.safe ? "Turn on 18+ (Safe Search off)" : "Turn Safe Search back on"}</button></div>
+    <h2>Security</h2>
+    <p>Info Oasis asks for your PIN every time you open it. Your PIN is scrambled before it’s saved on this phone and is never sent anywhere.</p>
+    <div class="setrow"><label for="lockSel">Lock the app</label>
+      <select id="lockSel">${opt(0, "When I leave the app")}${opt(1, "After 1 minute away or idle")}${opt(5, "After 5 minutes")}${opt(15, "After 15 minutes")}</select></div>
+    <div class="setrow"><button class="btn" id="lockNow2">Lock now</button><button class="iconbtn" id="clearLock">Clear session and lock</button></div>
+    <h3>Change PIN</h3>
+    <div class="pinform">
+      <input id="cp0" type="password" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="Current PIN" aria-label="Current PIN">
+      <input id="cp1" type="password" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="New PIN (4 to 8 digits)" aria-label="New PIN">
+      <input id="cp2" type="password" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="Confirm new PIN" aria-label="Confirm new PIN">
+      <button class="btn" id="cpGo">Change PIN</button>
+      <p id="cpMsg" role="status" style="color:var(--muted)"></p>
+    </div>
+    <h2>Install as an app</h2>
+    <p>In Chrome, tap ⋮ and choose “Install app” or “Add to Home screen”. It then opens in its own window, with no address bar and no browser history.</p>
+    <h2>Erase everything</h2>
+    <p>Removes your PIN and settings and clears this session. You’ll create a new PIN next time.</p>
+    <button class="iconbtn danger" id="eraseAll">Erase PIN and settings</button></article>`;
+  scrollTo(0, 0);
+}
+async function changePin() {
+  const cur = $("#cp0").value, n1 = $("#cp1").value, n2 = $("#cp2").value, msg = $("#cpMsg");
+  if (throttleLeft()) { msg.textContent = `Too many tries. Wait ${throttleLeft()} seconds.`; return; }
+  if (!(await checkPin(cur))) { failedAttempt(); msg.textContent = "Your current PIN is wrong."; return; }
+  if (!REG_PIN.test(n1)) { msg.textContent = "Use 4 to 8 digits for the new PIN."; return; }
+  if (n1 !== n2) { msg.textContent = "The new PINs don’t match."; return; }
+  await savePin(n1); store.del("throttle");
+  ["cp0", "cp1", "cp2"].forEach(id => { $("#" + id).value = ""; });
+  msg.textContent = "PIN changed."; toast("PIN changed.");
+}
+app.addEventListener("click", e => {
+  const id = e.target.id;
+  if (id === "lockNow2") showLock();
+  else if (id === "clearLock") clearSession();
+  else if (id === "cpGo") changePin();
+  else if (id === "sFsUp" || id === "sFsDown") {
+    state.fs = Math.min(1.7, Math.max(.9, +(state.fs + (id === "sFsUp" ? .1 : -.1)).toFixed(2)));
+    applyReading(); settings.fs = state.fs; saveSettings();
+    $("#sFsVal").textContent = Math.round(state.fs / 1.08 * 100) + "%";
+  }
+  else if (e.target.dataset.sset) {
+    state.theme = e.target.dataset.sset; applyReading(); settings.theme = state.theme; saveSettings();
+    document.querySelectorAll("[data-sset]").forEach(b => b.classList.toggle("on", b.dataset.sset === state.theme));
+  }
+  else if (id === "sSafe") state.safe ? ageDlg.showModal() : setSafe(true);
+  else if (id === "eraseAll" && confirm("Erase your PIN and settings? This also clears the current session, including any unexported Library.")) eraseAll();
+});
+app.addEventListener("change", e => {
+  if (e.target.id === "sLang") { state.lang = settings.lang = e.target.value; langSel.value = state.lang; saveSettings(); toast("Language updated."); }
+  if (e.target.id === "lockSel") { settings.lock = +e.target.value; saveSettings(); toast("Auto-lock updated."); }
+});
+app.addEventListener("input", e => { if (/^cp[012]$/.test(e.target.id)) e.target.value = e.target.value.replace(/\D/g, ""); });
+
+/* ---------- Start: locked until the PIN is entered. Nothing is requested before that. ---------- */
+showLock();
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) navigator.serviceWorker.register("sw.js").catch(() => {});
+</script>
+</body>
+</html>
